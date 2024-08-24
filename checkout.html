@@ -21,9 +21,36 @@
     <h1>Checkout</h1>
     <ol>
       <li>
-        <img src="" />
+        <img height="250" width="250" src="Pills.jpg" />
+        <p>Drug Name</p>
+        <p>Manufacturer</p>
+        <div class="qty-input">
+          <button
+            class="qty-count qty-count--minus"
+            data-action="minus"
+            type="button"
+          >
+            -
+          </button>
+          <input
+            class="product-qty"
+            type="number"
+            name="product-qty"
+            min="0"
+            max="10"
+            value="1"
+          />
+          <button
+            class="qty-count qty-count--add"
+            data-action="add"
+            type="button"
+          >
+            +
+          </button>
+        </div>
       </li>
     </ol>
+    <script src="file.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
