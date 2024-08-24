@@ -18,7 +18,7 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-self: center;
   align-content: center;
   justify-content: space-between;
@@ -43,11 +43,13 @@ h1 {
   background-color: #03045e;
   color: white;
   border: none;
+
 }
 
 .payment:hover {
   background-color: #caf0f8;
   color: black;
+  
 }
 
 .cart-products {
@@ -59,7 +61,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  border: #444 solid 5px;
+  border: #90e0ef solid 5px;
   border-radius: 10px;
   background-color: #90e0ef;
 }
@@ -87,3 +89,47 @@ h1 {
 
 .bill {
 }
+
+.sidepanel {
+  width 75px;
+  background-color:#03045e;
+  border: #03045e 5px solid;
+  border-radius: 10px;
+  font-size: 24px;
+  list-style: none;
+}
+
+
+
+.sp{
+  padding: 10px;
+}
+
+.sp:link,
+.sp:visited{
+  text-decoration: none;
+  color: #fff;
+  }
+
+
+  .sp:hover,
+  .sp:active{
+    background-color: #90e0ef;
+    border-radius: 10px;
+  }
+
+  .qtyinput{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 3/4;
+  }
+
+  .qtyfld{
+    background-color: #fff;
+    padd
+    align-items: center;  
+  }
+
+  .qtymod{
+    border-radius: 500px;
+  }
