@@ -7,13 +7,13 @@
 body {
   color: #444;
   font-family: sans-serif;
-  background-color: #caf0f8;
+  background-color: #fff;
 }
 
 h1 {
   border: #444 solid 5px;
-  background-color: #03045e;
-  color: #fff;
+  background-color: #f5f3f4;
+  color: #444;
 }
 
 .container {
@@ -40,16 +40,13 @@ h1 {
 .payment {
   grid-column: 1/-1;
   grid-row: 6/7;
-  background-color: #03045e;
-  color: white;
+  background-color: #f5f3f4;
   border: none;
-
+  border-radius: 2px;
 }
 
 .payment:hover {
-  background-color: #caf0f8;
-  color: black;
-  
+  background-color: #fff;
 }
 
 .cart-products {
@@ -57,13 +54,16 @@ h1 {
   gap: 20px;
 }
 
-.prod1 {
+.prod {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  border: #90e0ef solid 5px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border: #fff solid 5px;
   border-radius: 10px;
-  background-color: #90e0ef;
+  background-color: #f5f3f4;
+  padding: 20px;
+  text-align: center;
+  align-self: center;
 }
 
 .name {
@@ -71,10 +71,6 @@ h1 {
 
 .manuf-name {
   grid-row: 2/3;
-}
-
-.drug-pic {
-  grid-row: 1/3;
 }
 
 .qty-input {
@@ -91,45 +87,76 @@ h1 {
 }
 
 .sidepanel {
-  width 75px;
-  background-color:#03045e;
-  border: #03045e 5px solid;
+  background-color: #f5f3f4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pfp {
+  height: 100px;
+  width: auto;
+  padding: 20px;
+}
+
+.sidepanel-list {
+  width: 300px;
+  height: 300px;
+  background-color: #f5f3f4;
+  border: #f5f3f4 5px solid;
   border-radius: 10px;
   font-size: 24px;
   list-style: none;
+  grid-row: 2/3;
+  grid-column: 1/-1;
 }
 
-
-
-.sp{
+.sp {
   padding: 10px;
 }
 
 .sp:link,
-.sp:visited{
+.sp:visited {
   text-decoration: none;
-  color: #fff;
-  }
+  color: #000;
+}
 
+.sp:hover,
+.sp:active {
+  background-color: #fff;
+  border-radius: 10px;
+}
 
-  .sp:hover,
-  .sp:active{
-    background-color: #90e0ef;
-    border-radius: 10px;
-  }
+.qtyinput {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 3/4;
+}
 
-  .qtyinput{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 3/4;
-  }
+.qtyfld {
+  background-color: #fff;
+  align-content: center;
+  text-align: center;
+}
 
-  .qtyfld{
-    background-color: #fff;
-    padd
-    align-items: center;  
-  }
+.qtymod {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
 
-  .qtymod{
-    border-radius: 500px;
-  }
+.minus {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-right: 2px #444 solid;
+}
+
+.plus {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-left: 2px #444 solid;
+}
+
+.pfp,
+.inst-name {
+  align-self: center;
+}
