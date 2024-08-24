@@ -19,12 +19,73 @@
   </head>
   <body>
     <h1>Checkout</h1>
-    <div class="continer">
+    <div class="container">
       <ol class="cart-products">
         <li class="prod1">
-          <img height="250" width="250" src="Pills.jpg" />
+          <img class="drug-pic" height="150" width="150" src="Pills.jpg" />
           <p class="name">Drug Name</p>
           <p class="manuf-name">Manufacturer</p>
+          <p class="price">Price</p>
+          <div class="qty-input">
+            <button
+              class="qty-count qty-count--minus"
+              data-action="minus"
+              type="button"
+            >
+              -
+            </button>
+            <input
+              class="product-qty"
+              type="number"
+              name="product-qty"
+              min="0"
+              max="10"
+              value="1"
+            />
+            <button
+              class="qty-count qty-count--add"
+              data-action="add"
+              type="button"
+            >
+              +
+            </button>
+          </div>
+        </li>
+        <li class="prod1">
+          <img class="drug-pic" height="150" width="150" src="Pills.jpg" />
+          <p class="name">Drug Name</p>
+          <p class="manuf-name">Manufacturer</p>
+          <p class="price">Price</p>
+          <div class="qty-input">
+            <button
+              class="qty-count qty-count--minus"
+              data-action="minus"
+              type="button"
+            >
+              -
+            </button>
+            <input
+              class="product-qty"
+              type="number"
+              name="product-qty"
+              min="0"
+              max="10"
+              value="1"
+            />
+            <button
+              class="qty-count qty-count--add"
+              data-action="add"
+              type="button"
+            >
+              +
+            </button>
+          </div>
+        </li>
+        <li class="prod1">
+          <img class="drug-pic" height="150" width="150" src="Pills.jpg" />
+          <p class="name">Drug Name</p>
+          <p class="manuf-name">Manufacturer</p>
+          <p class="price">Price</p>
           <div class="qty-input">
             <button
               class="qty-count qty-count--minus"
@@ -52,9 +113,16 @@
         </li>
       </ol>
       <div class="amt-breakup">
-        <p>Gross Total:</p>
-        <p>GST(18%)</p>
-        <p>Total</p>
+        <p class="bill">Item Total:</p>
+        <p>Rs. x</p>
+        <p class="bill">Transport Charges:</p>
+        <p>Rs. x</p>
+        <p class="bill">Gross Total:</p>
+        <p>Rs. x</p>
+        <p class="bill">GST(18%):</p>
+        <p>Rs. x</p>
+        <p class="bill">Total:</p>
+        <p>Rs. x</p>
         <button class="payment">Proceed to Pay</button>
       </div>
     </div>
