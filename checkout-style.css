@@ -165,3 +165,7 @@ h1 {
 .inst-name {
   align-self: center;
 }
+
+.inst-name {
+  padding-top: 20px;
+}
