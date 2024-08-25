@@ -14,6 +14,7 @@ h1 {
   border: #444 solid 5px;
   background-color: #f5f3f4;
   color: #444;
+  margin-bottom: 50px;
 }
 
 .container {
@@ -28,13 +29,17 @@ h1 {
 }
 
 .amt-breakup {
-  border: #444 2px solid;
+  /* border: #444 2px solid; */
   border-radius: 5px;
+  border: #fff 5px solid;
   height: 300px;
   width: 250px;
+  padding: 20px;
+  background-color: #f5f3f4;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .payment {
@@ -64,6 +69,7 @@ h1 {
   padding: 20px;
   text-align: center;
   align-self: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .name {
@@ -90,6 +96,7 @@ h1 {
   background-color: #f5f3f4;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .pfp {
@@ -147,13 +154,11 @@ h1 {
 .minus {
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
-  border-right: 2px #444 solid;
 }
 
 .plus {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
-  border-left: 2px #444 solid;
 }
 
 .pfp,
