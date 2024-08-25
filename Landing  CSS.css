@@ -7,14 +7,14 @@
 }
 h1 {
     color: gainsboro;
-    margin-top: 700px;
-    margin-left: 70px;
+    padding: 30px 0 30px 30px;
     display: inline;
     border: none;
     background-color: transparent;
     border-color: none;
-    text-shadow: rgb(252, 0, 0);
+    text-shadow: 20px 20px 20px rgb(255, 0, 0);
     text-decoration: aqua;
+    font-size: 60px;
     
 }
 a {
@@ -30,9 +30,9 @@ body {
 }
 .intropara {
 
-    color: aliceblue;
-    width: 675px;
-    height: 300px;
+    color: whitesmoke;
+    
+    height: 400px;
     margin-top: 50px;
     font-size: 20px;
     display: block;
@@ -40,9 +40,17 @@ body {
     font-style: normal;
     font-weight: lighter;
     text-align: center;
-    margin-left: 325px;
+    margin-left: 240px;
+    margin-right: 140px;
+    overflow: scroll;
+    font-family: Georgia, serif;
+    font-style: oblique;
+    background-color: transparent;
+    border-radius: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: red transparent;
+    scroll-behavior:inherit;
 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 img {
     border-radius: 900px;
@@ -50,9 +58,22 @@ img {
     height: 275px;
     display: block;
     align-content: center;
-    margin: 30px 0 30px 480px;
+    margin: 30px 0 30px 510px;
     
 }
 .Imageicon {
     align-items: center;
+}
+#whyus {
+    font-size: 60px;
+    font-weight: bolder;
+    font-style: glober;
+    color: antiquewhite;
+    padding: 30px 0 30px 30px;
+    text-shadow: 20px 20px 20px rgb(255, 0, 0);
+    text-align: center;
+}
+#whyus2 {
+    color: white; 
+    padding-left: 40px;
 }
