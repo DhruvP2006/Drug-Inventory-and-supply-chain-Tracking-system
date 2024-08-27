@@ -73,7 +73,6 @@ body {
   font-size: 14px;
   background-color: #f5f3f4;
   grid-column: 2/3;
-  align-items: start;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,7 +94,6 @@ body {
 }
 
 .med-list-row {
-  margin-bottom: 10px;
   border-bottom: #000 1px solid;
 }
 
