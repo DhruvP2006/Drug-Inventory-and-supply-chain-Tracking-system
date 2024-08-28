@@ -12,18 +12,13 @@ body {
 
 .container {
   padding-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
   align-self: center;
   align-content: center;
-  justify-content: space-between;
   width: 1200px;
-  column-gap: 75px;
-  row-gap: 60px;
+  margin-top: 40px;
 }
 
-.sidepanel {
+/* .sidepanel {
   background-color: #f5f3f4;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -67,12 +62,11 @@ body {
 .sp:active {
   background-color: #fff;
   border-radius: 10px;
-}
+} */
 
 .inventory-dashboard {
   font-size: 14px;
   background-color: #f5f3f4;
-  grid-column: 2/3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -105,4 +99,57 @@ body {
   padding: 5px;
   margin: 5px;
   border-radius: 100px;
+}
+
+/* The Side Panel (hidden by default) */
+.side-panel {
+  height: 100%; /* Full height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* Side Panel Links */
+.side-panel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
+}
+
+/* Side Panel Links on Hover */
+.side-panel a:hover {
+  color: #f1f1f1;
+}
+
+/* Close Button */
+.side-panel .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Button to Open the Side Panel */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 20px;
+  position: absolute;
+  top: -20px;
+  left: -1px;
+  padding-right: 1448px;
 }

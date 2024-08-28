@@ -19,7 +19,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="sidepanel">
+      <button class="open-btn" onclick="openPanel()">☰ Menu</button>
+      <!-- The Side Panel -->
+      <div id="mySidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+          >&times;</a
+        >
+        <a href="#">Profile</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="purchase-order.html">Purchase Order</a>
+        <a href="order-stat.html">Order Status</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+      <!-- <div class="sidepanel">
         <img class="pfp" src="pfp.png" />
         <p class="inst-name">M/s. Apollo Pharmacy</p>
         <ul class="sidepanel-list">
@@ -40,7 +52,7 @@
             >
           </li>
           <li>
-            <a href="#" class="sp deliveryStat"
+            <a href="order-stat.html" class="sp deliveryStat"
               ><img height="20px" width="20px" src="inventory-alt.png" /> Order
               Status</a
             >
@@ -52,7 +64,7 @@
             >
           </li>
         </ul>
-      </div>
+      </div> -->
       <ol class="cart-products">
         <li class="prod">
           <p class="name">Paracetamol</p>
@@ -102,7 +114,7 @@
       </div>
     </div>
 
-    <script src="file.js"></script>
+    <script src="checkout.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

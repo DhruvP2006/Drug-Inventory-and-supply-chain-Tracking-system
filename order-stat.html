@@ -14,16 +14,26 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="purchase-order-style.css" />
+    <link rel="stylesheet" href="order-stat.css" />
     <title>title</title>
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <!-- <div class="sidepanel">
-        <img class="pfp" src="pfp.png" />
+      <!-- <div class="sidepanel"> -->
+        <div id="mySidePanel" class="side-panel">
+          <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+            >&times;</a
+          >
+          <a href="#">Profile</a>
+          <a href="inventory.html">Inventory</a>
+          <a href="purchase-order.html">Purchase Order</a>
+          <a href="order-stat.html">Order Status</a>
+          <a href="checkout.html">Checkout</a>
+        </div>
+        <!--<img class="pfp" src="pfp.png" />
         <p class="inst-name">M/s. Apollo Pharmacy</p>
-        <ul class="sidepanel-list">
+         <ul class="sidepanel-list">
           <li>
             <a href="#" class="sp profile"
               ><img height="20px" width="20px" src="pfp.png" /> Profile</a
@@ -52,8 +62,8 @@
               Checkout</a
             >
           </li>
-        </ul>
-      </div> -->
+        </ul> -->
+      </div>
       <div class="inventory-dashboard">
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid">
@@ -69,6 +79,7 @@
               </button>
             </form>
           </div>
+          <!-- DROPDOWN -->
           <div class="dropdown">
             <button
               class="btn btn-secondary dropdown-toggle"
@@ -89,60 +100,67 @@
         <div class="header">
           <table class="med-list">
             <tr class="med-list-row">
-              <th>SUPPPLIER NAME</th>
-              <th>PO DATE</th>
-              <th>PO NUMBER</th>
-              <th>PUR ORDER AMT</th>
-              <th>PUR ORD PENDING AMT</th>
-              <th>PAYMENT DUE DATE</th>
+              <th>ORDER NUMBER</th>
+              <th>SUPPPLIER</th>
+              <th>ORDER DATE</th>
+              <th>ORDER AMT</th>
+              <th>DELIVERY DATE</th>
             </tr>
             <tr class="med-list-row">
+              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
               <td>Apollo Pharama</td>
               <td>14/07/2024</td>
-              <td>4358</td>
               <td>50,000</td>
-              <td>0</td>
-              <td>14/07/2024</td>
-            </tr>
-            <tr class="med-list-row">
-              <td>Apollo Pharama</td>
-              <td>14/07/2024</td>
-              <td>4358</td>
-              <td>50,000</td>
-              <td>0</td>
               <td>14/07/2024</td>
             </tr>
             <tr class="med-list-row">
+              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
               <td>Apollo Pharama</td>
               <td>14/07/2024</td>
-              <td>4358</td>
               <td>50,000</td>
-              <td>0</td>
               <td>14/07/2024</td>
             </tr>
             <tr class="med-list-row">
+              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
               <td>Apollo Pharama</td>
               <td>14/07/2024</td>
-              <td>4358</td>
               <td>50,000</td>
-              <td>0</td>
+
               <td>14/07/2024</td>
             </tr>
             <tr class="med-list-row">
+              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
               <td>Apollo Pharama</td>
               <td>14/07/2024</td>
-              <td>4358</td>
               <td>50,000</td>
-              <td>0</td>
+
+              <td>14/07/2024</td>
+            </tr>
+            <tr class="med-list-row">
+              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
+              <td>Apollo Pharama</td>
+              <td>14/07/2024</td>
+              <td>50,000</td>
+
               <td>14/07/2024</td>
             </tr>
           </table>
         </div>
       </div>
     </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>This is a simple pop-up example.</p>
+      </div>
+    </div>
+
+    <!-- ORDER TRACKING ANIMATION -->
+
     <button class="open-btn" onclick="openPanel()">☰ Menu</button>
 
-    <!-- The Side Panel -->
+        <!-- The Side Panel -->
     <div id="mySidePanel" class="side-panel">
       <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
         >&times;</a
@@ -154,7 +172,10 @@
       <a href="checkout.html">Checkout</a>
     </div>
 
-    <script src="purchase-order.js"></script>
+    <!-- The Side Panel -->
+
+    <script src="order-stat.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

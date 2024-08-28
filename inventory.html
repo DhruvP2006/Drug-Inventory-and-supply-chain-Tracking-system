@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="sidepanel">
+      <!-- <div class="sidepanel">
         <img class="pfp" src="pfp.png" />
         <p class="inst-name">M/s. Apollo Pharmacy</p>
         <ul class="sidepanel-list">
@@ -41,7 +41,7 @@
             >
           </li>
           <li>
-            <a href="#" class="sp deliveryStat"
+            <a href="order-stat.html" class="sp deliveryStat"
               ><img height="20px" width="20px" src="inventory-alt.png" /> Order
               Status</a
             >
@@ -53,7 +53,7 @@
             >
           </li>
         </ul>
-      </div>
+      </div> -->
       <div class="inventory-dashboard">
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid">
@@ -148,6 +148,22 @@
         </div>
       </div>
     </div>
+
+    <button class="open-btn" onclick="openPanel()">☰ Menu</button>
+
+    <!-- The Side Panel -->
+    <div id="mySidePanel" class="side-panel">
+      <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+        >&times;</a
+      >
+      <a href="#">Profile</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="purchase-order.html">Purchase Order</a>
+      <a href="order-stat.html">Order Status</a>
+      <a href="checkout.html">Checkout</a>
+    </div>
+
+    <script src="inventory.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
