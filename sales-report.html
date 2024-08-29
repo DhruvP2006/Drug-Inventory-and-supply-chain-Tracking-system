@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="sales-report.css" />
+    <title>Inventory</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- The Side Panel -->
+      <div id="mySidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+          >&times;</a
+        >
+        <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
+        <a href="#"><img src="pfp.png" height="25px" width="25px" /> Profile</a>
+        <a href="inventory.html"
+          ><img height="20px" width="20px" src="inventory-alt.png" />
+          Inventory</a
+        >
+        <a href="sales-report.css"
+          ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
+        >
+        <a href="order-stat.html"
+          ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
+        >
+        <a href="checkout.html"
+          ><img height="20px" width="20px" src="shopping-cart.png" />
+          Checkout</a
+        >
+        <a href="#"
+          ><img height="20px" width="20px" src="logout.png" /> Logout</a
+        >
+      </div>
+
+      <button class="open-btn" onclick="openPanel()">☰ Menu</button>
+    </div>
+    <script src="inventory.js"></script>
+    <!-- Pie Charts -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- First Card -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Sales Report</h5>
+              <canvas id="pieChart1"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Second Card -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Pie Chart 2</h5>
+              <canvas id="pieChart2"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Third Card -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Pie Chart 3</h5>
+              <canvas id="pieChart3"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Fourth Card -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Pie Chart 4</h5>
+              <canvas id="pieChart4"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="sales-report.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

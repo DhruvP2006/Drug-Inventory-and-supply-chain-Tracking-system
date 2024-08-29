@@ -15,12 +15,12 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="inventory-style.css" />
-    <title>title</title>
-    <title>Document</title>
+    <title>Inventory</title>
   </head>
   <body>
     <div class="container">
       <!-- <div class="sidepanel">
+
         <img class="pfp" src="pfp.png" />
         <p class="inst-name">M/s. Apollo Pharmacy</p>
         <ul class="sidepanel-list">
@@ -54,6 +54,31 @@
           </li>
         </ul>
       </div> -->
+      <!-- The Side Panel -->
+      <div id="mySidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+          >&times;</a
+        >
+        <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
+        <a href="#"><img src="pfp.png" height="25px" width="25px" /> Profile</a>
+        <a href="inventory.html"
+          ><img height="20px" width="20px" src="inventory-alt.png" />
+          Inventory</a
+        >
+        <a href="sales-report.html"
+          ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
+        >
+        <a href="order-stat.html"
+          ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
+        >
+        <a href="checkout.html"
+          ><img height="20px" width="20px" src="shopping-cart.png" />
+          Checkout</a
+        >
+        <a href="#"
+          ><img height="20px" width="20px" src="logout.png" /> Logout</a
+        >
+      </div>
       <div class="inventory-dashboard">
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid">
@@ -149,32 +174,6 @@
       </div>
 
       <button class="open-btn" onclick="openPanel()">☰ Menu</button>
-
-      <!-- The Side Panel -->
-      <div id="mySidePanel" class="side-panel">
-        <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
-          >&times;</a
-        >
-        <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
-        <a href="#"><img src="pfp.png" height="25px" width="25px" /> Profile</a>
-        <a href="inventory.html"
-          ><img height="20px" width="20px" src="inventory-alt.png" />
-          Inventory</a
-        >
-        <a href="#"
-          ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
-        >
-        <a href="order-stat.html"
-          ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
-        >
-        <a href="checkout.html"
-          ><img height="20px" width="20px" src="shopping-cart.png" />
-          Checkout</a
-        >
-        <a href="#"
-          ><img height="20px" width="20px" src="logout.png" /> Logout</a
-        >
-      </div>
     </div>
     <script src="inventory.js"></script>
 
