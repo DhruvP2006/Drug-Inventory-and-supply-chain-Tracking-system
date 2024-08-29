@@ -167,13 +167,12 @@ h1 {
   border-bottom-right-radius: 100px;
 }
 
-.pfp,
 .inst-name {
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 22px;
   align-self: center;
-}
-
-.inst-name {
-  padding-top: 20px;
 }
 
 /* The Side Panel (hidden by default) */
@@ -184,7 +183,7 @@ h1 {
   z-index: 1; /* Sit on top */
   top: 0;
   left: 0;
-  background-color: #111; /* Black */
+  background-color: #1f3b4d; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
   padding-top: 60px; /* Place content 60px from the top */
@@ -218,7 +217,7 @@ h1 {
 .open-btn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #1f3b4d;
   color: white;
   padding: 10px 15px;
   border: none;

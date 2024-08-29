@@ -79,7 +79,7 @@ body {
 
 .navbar {
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 7fr 1fr 1fr;
   justify-content: space-between;
   margin-right: 30px;
   width: 100%;
@@ -88,6 +88,21 @@ body {
 .sort-btn {
   border: none;
   background-color: #fff;
+}
+
+.sales-invoice-btn {
+  border: 2px solid #198754;
+  color: #198754;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-right: 40px;
+  width: 180px;
+  height: 35px;
+}
+
+.sales-invoice-btn:hover {
+  background-color: #198754;
+  color: #fff;
 }
 
 .med-list {
@@ -112,6 +127,14 @@ body {
   padding: 5px;
   margin: 5px;
   border-radius: 100px;
+}
+
+.inst-name {
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  align-self: center;
 }
 
 .idpopup:link,
@@ -167,7 +190,7 @@ body {
   z-index: 1; /* Sit on top */
   top: 0;
   left: 0;
-  background-color: #111; /* Black */
+  background-color: #1f3b4d; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
   padding-top: 60px; /* Place content 60px from the top */
@@ -201,7 +224,7 @@ body {
 .open-btn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #1f3b4d;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -210,4 +233,42 @@ body {
   top: -20px;
   left: -1px;
   padding-right: 1448px;
+}
+
+/* Basic styling for the dropdown */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #198754;
+  border: 2px solid #198754;
+}
+
+.dropbtn:hover {
+  color: #fff;
+  background-color: #198754;
 }

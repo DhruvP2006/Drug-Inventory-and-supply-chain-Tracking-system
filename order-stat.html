@@ -21,17 +21,32 @@
   <body>
     <div class="container">
       <!-- <div class="sidepanel"> -->
-        <div id="mySidePanel" class="side-panel">
-          <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
-            >&times;</a
-          >
-          <a href="#">Profile</a>
-          <a href="inventory.html">Inventory</a>
-          <a href="purchase-order.html">Purchase Order</a>
-          <a href="order-stat.html">Order Status</a>
-          <a href="checkout.html">Checkout</a>
-        </div>
-        <!--<img class="pfp" src="pfp.png" />
+      <div id="mySidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+          >&times;</a
+        >
+        <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
+        <a href="#"><img src="pfp.png" height="25px" width="25px" /> Profile</a>
+        <a href="inventory.html"
+          ><img height="20px" width="20px" src="inventory-alt.png" />
+          Inventory</a
+        >
+        <a href="#"
+          ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
+        >
+        <a href="order-stat.html"
+          ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
+        >
+        <a href="checkout.html"
+          ><img height="20px" width="20px" src="shopping-cart.png" />
+          Checkout</a
+        >
+
+        <a href="checkout.html"
+          ><img height="20px" width="20px" src="logout.png" />Logout</a
+        >
+      </div>
+      <!--<img class="pfp" src="pfp.png" />
         <p class="inst-name">M/s. Apollo Pharmacy</p>
          <ul class="sidepanel-list">
           <li>
@@ -63,116 +78,112 @@
             >
           </li>
         </ul> -->
-      </div>
-      <div class="inventory-dashboard">
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-          <!-- DROPDOWN -->
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="true"
-            >
-              Sort By
+    </div>
+    <div class="inventory-dashboard">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Supplier Name</a></li>
-              <li><a class="dropdown-item" href="#">PO Date</a></li>
-              <li><a class="dropdown-item" href="#">Order Amount</a></li>
-              <li><a class="dropdown-item" href="#">Payment Due Date</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="header">
-          <table class="med-list">
-            <tr class="med-list-row">
-              <th>ORDER NUMBER</th>
-              <th>SUPPPLIER</th>
-              <th>ORDER DATE</th>
-              <th>ORDER AMT</th>
-              <th>DELIVERY DATE</th>
-            </tr>
-            <tr class="med-list-row">
-              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
-              <td>Apollo Pharama</td>
-              <td>14/07/2024</td>
-              <td>50,000</td>
-              <td>14/07/2024</td>
-            </tr>
-            <tr class="med-list-row">
-              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
-              <td>Apollo Pharama</td>
-              <td>14/07/2024</td>
-              <td>50,000</td>
-              <td>14/07/2024</td>
-            </tr>
-            <tr class="med-list-row">
-              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
-              <td>Apollo Pharama</td>
-              <td>14/07/2024</td>
-              <td>50,000</td>
-
-              <td>14/07/2024</td>
-            </tr>
-            <tr class="med-list-row">
-              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
-              <td>Apollo Pharama</td>
-              <td>14/07/2024</td>
-              <td>50,000</td>
-
-              <td>14/07/2024</td>
-            </tr>
-            <tr class="med-list-row">
-              <td><a class="idpopup" href="#" id="openModal">43596</a></td>
-              <td>Apollo Pharama</td>
-              <td>14/07/2024</td>
-              <td>50,000</td>
-
-              <td>14/07/2024</td>
-            </tr>
-          </table>
+          </form>
         </div>
+        <button class="sales-invoice-btn">Create Sales Invoice</button>
+
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown Menu</button>
+          <div class="dropdown-content">
+            <a href="#">Order Number</a>
+            <a href="#">Supplier</a>
+            <a href="#">Order Amount</a>
+          </div>
+        </div>
+        <!-- <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="true"
+          >
+            Sort By
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Supplier Name</a></li>
+            <li><a class="dropdown-item" href="#">PO Date</a></li>
+            <li><a class="dropdown-item" href="#">Order Amount</a></li>
+            <li><a class="dropdown-item" href="#">Payment Due Date</a></li>
+          </ul>
+        </div> -->
+      </nav>
+      <div class="header">
+        <table class="med-list">
+          <tr class="med-list-row">
+            <th>ORDER NUMBER</th>
+            <th>SUPPPLIER</th>
+            <th>ORDER DATE</th>
+            <th>ORDER AMT</th>
+            <th>PUR ORD PENDING AMT</th>
+            <th>DELIVERY DATE</th>
+          </tr>
+          <tr class="med-list-row">
+            <td><a class="idpopup" href="#" id="openModal">43596</a></td>
+            <td>Apollo Pharama</td>
+            <td>14/07/2024</td>
+            <td>50,000</td>
+            <td>0</td>
+            <td>14/07/2024</td>
+          </tr>
+          <tr class="med-list-row">
+            <td><a class="idpopup" href="#" id="openModal">43596</a></td>
+            <td>Apollo Pharama</td>
+            <td>14/07/2024</td>
+            <td>50,000</td>
+            <td>0</td>
+            <td>14/07/2024</td>
+          </tr>
+          <tr class="med-list-row">
+            <td><a class="idpopup" href="#" id="openModal">43596</a></td>
+            <td>Apollo Pharama</td>
+            <td>14/07/2024</td>
+            <td>50,000</td>
+            <td>0</td>
+            <td>14/07/2024</td>
+          </tr>
+          <tr class="med-list-row">
+            <td><a class="idpopup" href="#" id="openModal">43596</a></td>
+            <td>Apollo Pharama</td>
+            <td>14/07/2024</td>
+            <td>50,000</td>
+            <td>0</td>
+            <td>14/07/2024</td>
+          </tr>
+          <tr class="med-list-row">
+            <td><a class="idpopup" href="#" id="openModal">43596</a></td>
+            <td>Apollo Pharama</td>
+            <td>14/07/2024</td>
+            <td>50,000</td>
+            <td>0</td>
+            <td>14/07/2024</td>
+          </tr>
+        </table>
       </div>
     </div>
 
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>This is a simple pop-up example.</p>
+        <h2>Order Delivery Status</h2>
+        <p></p>
       </div>
     </div>
 
-    <!-- ORDER TRACKING ANIMATION -->
-
     <button class="open-btn" onclick="openPanel()">☰ Menu</button>
-
-        <!-- The Side Panel -->
-    <div id="mySidePanel" class="side-panel">
-      <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
-        >&times;</a
-      >
-      <a href="#">Profile</a>
-      <a href="inventory.html">Inventory</a>
-      <a href="purchase-order.html">Purchase Order</a>
-      <a href="order-stat.html">Order Status</a>
-      <a href="checkout.html">Checkout</a>
-    </div>
-
-    <!-- The Side Panel -->
 
     <script src="order-stat.js"></script>
 
@@ -181,6 +192,7 @@
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"

@@ -21,7 +21,7 @@ body {
   row-gap: 60px;
 }
 
-.sidepanel {
+/* .sidepanel {
   background-color: #f5f3f4;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -65,7 +65,7 @@ body {
 .sp:active {
   background-color: #fff;
   border-radius: 10px;
-}
+} */
 
 .inventory-dashboard {
   font-size: 14px;
@@ -73,6 +73,7 @@ body {
   grid-column: 2/3;
   align-items: start;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .navbar {
@@ -90,6 +91,7 @@ body {
 .med-list {
   width: 100%;
   text-align: center;
+  border-radius: 10px;
 }
 
 .med-list-row {
@@ -102,9 +104,26 @@ body {
 }
 
 .stk-ord-btn {
+  color: #198754;
+  border: 2px solid #198754;
+  background-color: #f5f3f4;
   padding: 5px;
   margin: 5px;
   border-radius: 100px;
+  font-size: 24px;
+}
+
+.stk-ord-btn:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+.inst-name {
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  align-self: center;
 }
 
 /* The Side Panel (hidden by default) */
@@ -115,7 +134,7 @@ body {
   z-index: 1; /* Sit on top */
   top: 0;
   left: 0;
-  background-color: #111; /* Black */
+  background-color: #1f3b4d; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
   padding-top: 60px; /* Place content 60px from the top */
@@ -149,7 +168,7 @@ body {
 .open-btn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #1f3b4d;
   color: white;
   padding: 10px 15px;
   border: none;
