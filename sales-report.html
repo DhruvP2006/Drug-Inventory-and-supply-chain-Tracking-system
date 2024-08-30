@@ -55,10 +55,10 @@
     </div>
     <script src="inventory.js"></script>
     <!-- Pie Charts -->
-    <div class="container my-5">
+    <div class="box my-5">
       <div class="row">
         <!-- First Card -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4 chart1">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title text-center">Sales Report</h5>
@@ -67,34 +67,31 @@
           </div>
         </div>
         <!-- Second Card -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4 chart2">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title text-center">Pie Chart 2</h5>
+              <h5 class="card-title text-center">
+                Top Selling Types of Medicines
+              </h5>
               <canvas id="pieChart2"></canvas>
             </div>
           </div>
         </div>
         <!-- Third Card -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4 chart3">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title text-center">Pie Chart 3</h5>
+              <h5 class="card-title text-center">
+                Monthly Sales Target - January
+              </h5>
               <canvas id="pieChart3"></canvas>
-            </div>
-          </div>
-        </div>
-        <!-- Fourth Card -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-center">Pie Chart 4</h5>
-              <canvas id="pieChart4"></canvas>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <canvas id="salesChart"></canvas>
 
     <script src="sales-report.js"></script>
 
