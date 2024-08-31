@@ -8,6 +8,11 @@ body {
   color: #444;
   font-family: sans-serif;
   background-color: #fff;
+  border-top: 51px #1f3b4d solid;
+  width: auto;
+  align-self: center;
+  align-content: center;
+  justify-content: space-between;
 }
 
 h1 {
@@ -19,11 +24,9 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-self: center;
-  align-content: center;
-  justify-content: space-between;
-  width: 1200px;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   column-gap: 30px;
   row-gap: 60px;
   padding-top: 80px;
@@ -41,7 +44,7 @@ h1 {
   grid-template-rows: repeat(6, 1fr);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   grid-row: 2/3;
-  grid-column: 2/3;
+  grid-column: 3/4;
 }
 
 .payment {
@@ -60,7 +63,7 @@ h1 {
   display: grid;
   gap: 20px;
   grid-row: 2/3;
-  grid-column: 1/2;
+  grid-column: 2/3;
 }
 
 .prod {
@@ -75,6 +78,7 @@ h1 {
   align-items: center;
   text-align: center;
   justify-items: center;
+  align-self: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0;
 }
@@ -229,5 +233,29 @@ h1 {
   position: absolute;
   top: -20px;
   left: -1px;
-  padding-right: 1448px;
+}
+
+.calc {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: #f1f1f1;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 300px;
+  background-color: #f5f3f4;
+  border: #fff 5px solid;
+  border-radius: 10px;
+}
+
+.calculate {
+  margin: 10px;
+  padding: 5px;
+  display: block;
+}
+
+.container-fluid {
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
