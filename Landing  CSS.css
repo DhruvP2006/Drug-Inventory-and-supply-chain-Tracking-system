@@ -18,8 +18,8 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
 }
 
-p {
-    color: #666;
+.BlueBG {
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -41,7 +41,9 @@ a {
 }
 
 .btn-primary {
-    background-color: #28a745;
+    background-color: #bc7229;
+    all: none;
+    font-size: large;
 }
 
 .btn-primary:hover {
@@ -191,10 +193,19 @@ footer {
 .contact-info {
     margin-top: 10px;
 }
-.paraaa {
-    padding: 30px 30px 30px 30px;
-    background-color: #fff;
-    border-radius: 20x;
-    text-align: center;
-    font-size: large;
+#About_Us {
+    margin: 80px, 80px, 80px, 80px;
+    background-color: #ffffff;
+    font-size: medium;
+    font-weight: bolder;
+    font-size: larger;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: left;
+    font-family: serif;
+    
+}
+b {
+    color: #343a40;
+    font-size: 38px;
 }
