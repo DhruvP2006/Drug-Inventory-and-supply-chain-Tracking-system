@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="login.js"></script>
+    </head>
+    <body>
+    <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+    </form>
+    <div id="user-info">elvish Bhai ka to hard ich nahi hai</div>
+
+    <script>
+        const form = document.getElementById('login-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+            if (error) {
+                alert('Login failed');
+            } else {
+                alert('Login successful');
+            }
+        });
+    </script>
+</body></html>

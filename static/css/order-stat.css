@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  align-self: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 1200px;
+  column-gap: 75px;
+  row-gap: 60px;
+  position: relative;
+}
+
+/* .sidepanel {
+  background-color: #f5f3f4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* .inst-name {
+  padding-top: 20px;
+}
+
+.pfp {
+  height: 100px;
+  width: auto;
+  padding: 20px;
+}
+
+.sidepanel-list {
+  width: 200pxpx;
+  height: 300px;
+  background-color: #f5f3f4;
+  border: #f5f3f4 5px solid;
+  border-radius: 10px;
+  font-size: 24px;
+  list-style: none;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  padding: 10px;
+}
+
+.sp {
+  padding: 10px;
+}
+
+.sp:link,
+.sp:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.sp:hover,
+.sp:active {
+  background-color: #fff;
+  border-radius: 10px;
+} */
+
+/* .inventory-dashboard {
+  font-size: 14px;
+  background-color: #f5f3f4;
+  grid-column: 2/3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.navbar {
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr;
+  justify-content: space-between;
+  margin-right: 30px;
+  width: 100%;
+}
+
+.sort-btn {
+  border: none;
+  background-color: #fff;
+}
+
+.sales-invoice-btn {
+  border: 2px solid #198754;
+  color: #198754;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-right: 40px;
+  width: 180px;
+  height: 35px;
+}
+
+.sales-invoice-btn:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+.med-list {
+  width: 100%;
+  text-align: center;
+}
+
+.med-list-row {
+  border-bottom: #000 1px solid;
+}
+
+.med-list-row:nth-child(odd) {
+  background-color: #fff;
+}
+
+.inventory-dashboard {
+  width: 95%;
+  margin-left: 30px;
+}
+
+.stk-ord-btn {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 100px;
+}
+
+.inst-name {
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  align-self: center;
+}
+
+.idpopup:link,
+.idpopup:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Side Panel (hidden by default) */
+.side-panel {
+  height: 100%; /* Full height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  left: 0;
+  background-color: #1f3b4d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* Side Panel Links */
+.side-panel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
+}
+
+/* Side Panel Links on Hover */
+.side-panel a:hover {
+  color: #f1f1f1;
+}
+
+/* Close Button */
+.side-panel .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Button to Open the Side Panel */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1f3b4d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 20px;
+  position: absolute;
+  top: -20px;
+  left: -1px;
+  padding-right: 1448px;
+}
+
+/* Basic styling for the dropdown */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #198754;
+  border: 2px solid #198754;
+}
+
+.dropbtn:hover {
+  color: #fff;
+  background-color: #198754;
+}
