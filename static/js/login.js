@@ -1,8 +1,18 @@
-const user = supabase.auth.user();
-if (user) {
-  	document.getElementById('user-info').innerText = `Logged in as: ${user.email}`;
-}
-else {
-	console.log('not logged in');
-  	document.getElementById('user-info').innerText = 'Not logged in';
-}
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var errorMessage = document.getElementById("error-message");
+
+    // Simple validation for demonstration purposes
+    if (username === "user" && password === "pass") {
+      alert("Login successful!");
+      // You can redirect to another page here
+    } else {
+      errorMessage.textContent = "Invalid username or password";
+      errorMessage.style.display = "block";
+    }
+  });
