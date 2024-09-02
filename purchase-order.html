@@ -14,7 +14,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="order-stat.css" />
+    <link rel="stylesheet" href="purchase-order.css" />
     <title>Order Status</title>
   </head>
   <body>
@@ -25,15 +25,17 @@
           >&times;</a
         >
         <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
-        <a href="#"><img src="pfp.png" height="25px" width="25px" /> Profile</a>
+        <a href="Profile.html"
+          ><img src="pfp.png" height="25px" width="25px" /> Profile</a
+        >
         <a href="inventory.html"
           ><img height="20px" width="20px" src="inventory-alt.png" />
           Inventory</a
         >
-        <a href="sales-report.css"
+        <a href="sales-report.html"
           ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
         >
-        <a href="order-stat.html"
+        <a href="purchase-order.html"
           ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
         >
         <a href="checkout.html"
@@ -41,7 +43,7 @@
           Checkout</a
         >
 
-        <a href="checkout.html"
+        <a href="Landing page.html"
           ><img height="20px" width="20px" src="logout.png" />Logout</a
         >
       </div>
@@ -93,10 +95,21 @@
             </button>
           </form>
         </div>
+        <div class="date-range-container">
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" />
+
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" />
+
+          <button id="submitBtn">Submit</button>
+        </div>
+
+        <div id="output"></div>
         <button class="sales-invoice-btn">Create Sales Invoice</button>
 
         <div class="dropdown">
-          <button class="dropbtn">Dropdown Menu</button>
+          <button class="dropbtn">Sort By</button>
           <div class="dropdown-content">
             <a href="#">Order Number</a>
             <a href="#">Supplier</a>
@@ -184,7 +197,10 @@
 
     <button class="open-btn" onclick="openPanel()">☰ Menu</button>
 
-    <script src="order-stat.js"></script>
+    <!-- Date -->
+
+    <!-- Date -->
+    <script src="purchase-order.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

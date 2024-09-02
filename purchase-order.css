@@ -79,8 +79,8 @@ body {
 
 .navbar {
   display: grid;
-  grid-template-columns: 7fr 1fr 1fr;
-  justify-content: space-between;
+  grid-template-columns: 2fr 4fr 1fr 1fr;
+  /* justify-content: space-between; */
   margin-right: 30px;
   width: 100%;
 }
@@ -236,6 +236,10 @@ body {
 }
 
 /* Basic styling for the dropdown */
+.dropdown {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
 
 .dropdown-content {
   display: none;
@@ -271,4 +275,48 @@ body {
 .dropbtn:hover {
   color: #fff;
   background-color: #198754;
+}
+
+.sales-invoice-btn {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+/* Date */
+
+.date-range-container {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.date-range-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.date-range-container input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#submitBtn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#submitBtn:hover {
+  background-color: #0056b3;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 18px;
 }

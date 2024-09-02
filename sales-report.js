@@ -10,14 +10,14 @@ function closePanel() {
 
 // Pie chart data for all charts
 const data1 = {
-  labels: ["Sales", "Purchase", "Stock"],
+  labels: ["Sales", "Purchase"],
   datasets: [
     {
-      data: [300, 50, 100],
+      data: [30, 50],
       backgroundColor: [
         "rgb(255, 99, 132)",
         "rgb(54, 162, 235)",
-        "rgb(255, 205, 86)",
+        // "rgb(255, 205, 86)",
       ],
       hoverOffset: 4,
     },
@@ -25,14 +25,16 @@ const data1 = {
 };
 
 const data2 = {
-  labels: ["Homeopathic", "Ayurvedic", "General"],
+  labels: ["med1", "med2", "med3", "med4", "med5"],
   datasets: [
     {
-      data: [300, 50, 100],
+      data: [30, 50, 100, 60, 70],
       backgroundColor: [
         "rgb(255, 99, 132)",
         "rgb(54, 162, 235)",
         "rgb(255, 205, 86)",
+        "#2a9d8f",
+        "#48cae4",
       ],
       hoverOffset: 4,
     },
