@@ -1,9 +1,16 @@
-/* Open the side panel */
-function openPanel() {
-  document.getElementById("mySidePanel").style.width = "250px";
-}
+function calculateTotal() {
+  const quantity = parseFloat(document.getElementById("quantity").value);
+  const price = parseFloat(document.getElementById("price").value);
+  const discount = parseFloat(document.getElementById("discount").value);
 
-/* Close the side panel */
-function closePanel() {
-  document.getElementById("mySidePanel").style.width = "0";
+  if (!isNaN(quantity) && !isNaN(price) && !isNaN(discount)) {
+    const discountedAmount = (price * discount) / 100;
+    const total = (price - discountedAmount) * quantity;
+
+    document.getElementById("discountedAmount").value =
+      discountedAmount.toFixed(2);
+    document.getElementById("total").value = total.toFixed(2);
+  } else {
+    alert("Please enter valid numbers for quantity, price, and discount.");
+  }
 }

@@ -36,7 +36,7 @@
         <a href="sales-report.html"
           ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
         >
-        <a href="order-stat.html"
+        <a href="purchase-order.html"
           ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
         >
         <a href="checkout.html"
@@ -48,16 +48,29 @@
         >
       </div>
       <div class="calc">
-        <label for="name">Quantity:</label>
-        <input type="text" id="name" name="name" />
+      <label for="quantity">Quantity:</label>
+      <input type="text" id="quantity" name="quantity" />
 
-        <label for="name">Price:</label>
-        <input type="text" id="name" name="name" />
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" />
 
-        <button class="calculate">Calculate</button>
-        <label for="name">Total:</label>
-        <input type="text" id="name" name="name" />
+      <label for="discount">Discount:</label>
+      <div class="disc-calc">
+        <input type="text" id="discount" name="discount" class="fld1" />
+        <label for="discount" class="lb2">% =</label>
+        <input
+          type="text"
+          id="discountedAmount"
+          name="discountedAmount"
+          class="fld2"
+          disabled
+        />
       </div>
+      <button class="calculate" onclick="calculateTotal()">Calculate</button>
+
+      <label for="total">Total:</label>
+      <input type="text" id="total" name="total" disabled />
+    </div>
       <div class="container-fluid">
         <form class="d-flex" role="search">
           <input
@@ -107,7 +120,9 @@
         <li class="prod">
           <p class="name">Paracetamol</p>
           <p class="manuf-name">Cipla</p>
-          <p class="price">Rs. 50</p>
+          <p class="itemcode">Item Code: 45678</p>
+          <p class="hsncode">HSN Code: 9804</p>
+          <p class="price">Rate &#8377 50</p>
           <div class="qtyinput">
             <button class="qtymod minus">-</button>
             <fieldset class="qtyfld">0</fieldset>
@@ -117,7 +132,9 @@
         <li class="prod">
           <p class="name">Ibuprofen</p>
           <p class="manuf-name">Pfizer</p>
-          <p class="price">Rs. 250</p>
+          <p class="itemcode">Item Code: 45678</p>
+          <p class="hsncode">HSN Code: 9804</p>
+          <p class="price">Rate &#8377 250</p>
           <div class="qtyinput">
             <button class="qtymod minus">-</button>
             <fieldset class="qtyfld">0</fieldset>
@@ -127,7 +144,9 @@
         <li class="prod">
           <p class="name">Azithromycin</p>
           <p class="manuf-name">Sun Pharma</p>
-          <p class="price">Rs. 200</p>
+          <p class="itemcode">Item Code: 45678</p>
+          <p class="hsncode">HSN Code: 9804</p>
+          <p class="price">Rate &#8377 200</p>
           <div class="qtyinput">
             <button class="qtymod minus">-</button>
             <fieldset class="qtyfld">0</fieldset>
