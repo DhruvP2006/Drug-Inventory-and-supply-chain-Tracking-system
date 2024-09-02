@@ -8,6 +8,7 @@ body {
   font-family: "Inert" sans-serif;
   align-items: center;
   justify-items: center;
+  border-top: 51px #1f3b4d solid;
 }
 
 .row {
@@ -23,6 +24,14 @@ body {
   justify-self: center;
   gap: 30px;
   margin-left: 60px;
+}
+
+.inst-name {
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  align-self: center;
 }
 
 /* The Side Panel (hidden by default) */
@@ -75,7 +84,6 @@ body {
   position: absolute;
   top: -20px;
   left: -1px;
-  padding-right: 1448px;
 }
 
 canvas {

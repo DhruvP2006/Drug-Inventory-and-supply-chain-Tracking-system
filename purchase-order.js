@@ -54,3 +54,9 @@ window.onclick = function (event) {
     }
   }
 };
+
+// Date
+document.getElementById("submitBtn").addEventListener("click", function () {
+  const startDate = document.getElementById("startDate").value;
+  const endDate = document.getElementById("endDate").value;
+});

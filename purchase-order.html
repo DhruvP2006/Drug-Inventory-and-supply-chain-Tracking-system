@@ -95,10 +95,21 @@
             </button>
           </form>
         </div>
+        <div class="date-range-container">
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" />
+
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" />
+
+          <button id="submitBtn">Submit</button>
+        </div>
+
+        <div id="output"></div>
         <button class="sales-invoice-btn">Create Sales Invoice</button>
 
         <div class="dropdown">
-          <button class="dropbtn">Dropdown Menu</button>
+          <button class="dropbtn">Sort By</button>
           <div class="dropdown-content">
             <a href="#">Order Number</a>
             <a href="#">Supplier</a>
@@ -186,6 +197,9 @@
 
     <button class="open-btn" onclick="openPanel()">☰ Menu</button>
 
+    <!-- Date -->
+
+    <!-- Date -->
     <script src="purchase-order.js"></script>
 
     <script
