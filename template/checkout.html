@@ -25,52 +25,67 @@
         <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
           >&times;</a
         >
-        <h4 class="inst-name">M/s. Apollo Pharmacy <p>- Pharmacy</p></h4>
+        <h4 class="inst-name">
+          M/s. Apollo Pharmacy
+          <p>- Pharmacy</p>
+        </h4>
         <a href="Profile.html"
-          ><img src="pfp.png" height="25px" width="25px" /> Profile</a
+          ><img src="..\static\images\pfp.png" height="25px" width="25px" />
+          Profile</a
         >
         <a href="inventory.html"
-          ><img height="20px" width="20px" src="inventory-alt.png" />
+          ><img
+            height="20px"
+            width="20px"
+            src="..\static\images\inventory-alt.png"
+          />
           Inventory</a
         >
         <a href="sales-report.html"
-          ><img height="20px" width="20px" src="sales.png" /> Sales Report</a
+          ><img height="20px" width="20px" src="..\static\images\sales.png" />
+          Sales Report</a
         >
         <a href="purchase-order.html"
-          ><img height="20px" width="20px" src="PO.png" /> Purchase Order</a
+          ><img height="20px" width="20px" src="..\static\images\PO.png" />
+          Purchase Order</a
         >
         <a href="checkout.html"
-          ><img height="20px" width="20px" src="shopping-cart.png" />
+          ><img
+            height="20px"
+            width="20px"
+            src="../static/images/shopping-cart.png"
+          />
           Checkout</a
         >
         <a href="Landing page.html"
-          ><img height="20px" width="20px" src="logout.png" /> Logout</a
+          ><img height="20px" width="20px" src="..\static\images\logout.png" />
+          Logout</a
         >
       </div>
       <div class="calc">
-      <label for="quantity">Quantity:</label>
-      <input type="text" id="quantity" name="quantity" />
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" />
 
-      <label for="price">Price:</label>
-      <input type="text" id="price" name="price" />
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" />
 
-      <label for="discount">Discount:</label>
-      <div class="disc-calc">
-        <input type="text" id="discount" name="discount" class="fld1" />
-        <label for="discount" class="lb2">% =</label>
-        <input
-          type="text"
-          id="discountedAmount"
-          name="discountedAmount"
-          class="fld2"
-          disabled
-        />
+        <label for="discount">Discount:</label>
+        <div class="disc-calc">
+          <input type="text" id="discount" name="discount" class="fld1" />
+          <label for="discount" class="lb2">% =</label>
+          <input
+            type="text"
+            id="discountedAmount"
+            name="discountedAmount"
+            class="fld2"
+            disabled
+          />
+        </div>
+        <button class="calculate" onclick="calculateTotal()">Calculate</button>
+
+        <label for="total">Total:</label>
+        <input type="text" id="total" name="total" disabled />
       </div>
-      <button class="calculate" onclick="calculateTotal()">Calculate</button>
-
-      <label for="total">Total:</label>
-      <input type="text" id="total" name="total" disabled />
-    </div>
       <div class="container-fluid">
         <form class="d-flex" role="search">
           <input
@@ -122,7 +137,7 @@
           <p class="manuf-name">Cipla</p>
           <p class="itemcode">Item Code: 45678</p>
           <p class="hsncode">HSN Code: 9804</p>
-          <p class="price">Rate &#8377 50</p>
+          <p class="price">Rate 50</p>
           <div class="qtyinput">
             <button class="qtymod minus">-</button>
             <fieldset class="qtyfld">0</fieldset>
@@ -134,7 +149,7 @@
           <p class="manuf-name">Pfizer</p>
           <p class="itemcode">Item Code: 45678</p>
           <p class="hsncode">HSN Code: 9804</p>
-          <p class="price">Rate &#8377 250</p>
+          <p class="price">Rate 250</p>
           <div class="qtyinput">
             <button class="qtymod minus">-</button>
             <fieldset class="qtyfld">0</fieldset>
@@ -146,7 +161,7 @@
           <p class="manuf-name">Sun Pharma</p>
           <p class="itemcode">Item Code: 45678</p>
           <p class="hsncode">HSN Code: 9804</p>
-          <p class="price">Rate &#8377 200</p>
+          <p class="price">Rate 200</p>
           <div class="qtyinput">
             <button class="qtymod minus">-</button>
             <fieldset class="qtyfld">0</fieldset>
@@ -166,7 +181,8 @@
         <p class="bill">Total:</p>
         <p>Rs. x</p>
         <button class="payment">
-          <img height="20px" width="20px" src="../static/images/pay.png" /> Proceed To Pay
+          <img height="20px" width="20px" src="../static/images/pay.png" />
+          Proceed To Pay
         </button>
       </div>
     </div>
