@@ -97,96 +97,70 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
-      <!-- <div class="sidepanel">
-        <img class="pfp" src="pfp.png" />
-        <p class="inst-name">M/s. Apollo Pharmacy</p>
-        <ul class="sidepanel-list">
-          <li>
-            <a href="#" class="sp profile"
-              ><img height="20px" width="20px" src="pfp.png" /> Profile</a
-            >
-          </li>
-          <li>
-            <a href="inventory.html" class="sp invertory"
-              ><img height="20px" width="20px" src="inventory-alt.png" />
-              Inventory</a
-            >
-          </li>
-          <li>
-            <a href="purchase-order.html" class="sp po">
-              <img height="20px" width="20px" src="PO.png" />Purchase Order</a
-            >
-          </li>
-          <li>
-            <a href="order-stat.html" class="sp deliveryStat"
-              ><img height="20px" width="20px" src="inventory-alt.png" /> Order
-              Status</a
-            >
-          </li>
-          <li>
-            <a href="checkout.html" class="sp checkout">
-              <img height="20px" width="20px" src="shopping-cart.png" />
-              Checkout</a
-            >
-          </li>
-        </ul>
-      </div> -->
-      <ol class="cart-products">
+      <!-- <ol class="cart-products">
         <li class="prod">
           <p class="name">Paracetamol</p>
           <p class="manuf-name">Cipla</p>
           <p class="itemcode">Item Code: 45678</p>
-          <p class="hsncode">HSN Code: 9804</p>
+          <p class="hsncode">HSN/SAC Code: 9804</p>
           <p class="price">Rate 50</p>
-          <div class="qtyinput">
-            <button class="qtymod minus">-</button>
-            <fieldset class="qtyfld">0</fieldset>
-            <button class="qtymod plus">+</button>
+
+          <div class="quantity-container">
+            <div class="minus quantity-button" onclick="decrement(this)">-</div>
+            <input type="text" class="quantity-input" value="1" readonly />
+            <div class="plus quantity-button" onclick="increment(this)">+</div>
+            <button class="delete-item">X</button>
           </div>
         </li>
         <li class="prod">
           <p class="name">Ibuprofen</p>
           <p class="manuf-name">Pfizer</p>
           <p class="itemcode">Item Code: 45678</p>
-          <p class="hsncode">HSN Code: 9804</p>
+          <p class="hsncode">HSN/SAC Code: 9804</p>
           <p class="price">Rate 250</p>
-          <div class="qtyinput">
-            <button class="qtymod minus">-</button>
-            <fieldset class="qtyfld">0</fieldset>
-            <button class="qtymod plus">+</button>
+
+          <div class="quantity-container">
+            <div class="minus quantity-button" onclick="decrement(this)">-</div>
+            <input type="text" class="quantity-input" value="1" readonly />
+            <div class="plus quantity-button" onclick="increment(this)">+</div>
+            <button class="delete-item">X</button>
           </div>
         </li>
         <li class="prod">
           <p class="name">Azithromycin</p>
           <p class="manuf-name">Sun Pharma</p>
           <p class="itemcode">Item Code: 45678</p>
-          <p class="hsncode">HSN Code: 9804</p>
-          <p class="price">Rate 200</p>
-          <div class="qtyinput">
-            <button class="qtymod minus">-</button>
-            <fieldset class="qtyfld">0</fieldset>
-            <button class="qtymod plus">+</button>
+          <p class="hsncode">HSN/SAC Code: 9804</p>
+          <p class="price" id="rate">Rate 200</p>
+          <div class="quantity-container">
+            <div class="minus quantity-button" onclick="decrement(this)">-</div>
+            <input type="text" class="quantity-input" value="1" readonly />
+            <div class="plus quantity-button" onclick="increment(this)">+</div>
+            <button class="delete-item">X</button>
           </div>
-        </li>
+        </li> -->
+        <div id="item-card-container">
+      <!-- The item cards will be inserted here by JavaScript -->
+    </div>
       </ol>
       <div class="amt-breakup">
         <p class="bill">Item Total:</p>
-        <p>Rs. x</p>
+        <input class="amount" disabled />
         <p class="bill">Transport Charges:</p>
-        <p>Rs. x</p>
+        <input class="amount" disabled />
         <p class="bill">Gross Total:</p>
-        <p>Rs. x</p>
+        <input class="amount" disabled />
         <p class="bill">GST(18%):</p>
-        <p>Rs. x</p>
+        <input class="amount" disabled />
         <p class="bill">Total:</p>
-        <p>Rs. x</p>
+        <input class="amount" disabled />
         <button class="payment">
           <img height="20px" width="20px" src="../static/images/pay.png" />
-          Proceed To Pay
+          Generate Request
         </button>
       </div>
     </div>
-
+    
     <script src="../static/js/checkout.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

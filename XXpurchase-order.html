@@ -3,35 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="XXpurchase-order-style.css" />
-    <title>Document</title>
+    <title>Source Page</title>
   </head>
   <body>
-    <div class="calc">
-      <label for="quantity">Quantity:</label>
-      <input type="text" id="quantity" name="quantity" />
+    <table id="item-table">
+      <tr>
+        <td class="item-name">Amazing Product 1</td>
+        <td class="item-price">$25.00</td>
+        <td class="item-description">
+          This is an amazing product 1 that you will love!
+        </td>
+        <td><button class="add-to-cart">Add to Cart</button></td>
+      </tr>
+    </table>
 
-      <label for="price">Price:</label>
-      <input type="text" id="price" name="price" />
+    <script>
+      const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
-      <label for="discount">Discount:</label>
-      <div class="disc-calc">
-        <input type="text" id="discount" name="discount" class="fld1" />
-        <label for="discount" class="lb2">% =</label>
-        <input
-          type="text"
-          id="discountedAmount"
-          name="discountedAmount"
-          class="fld2"
-          disabled
-        />
-      </div>
-      <button class="calculate" onclick="calculateTotal()">Calculate</button>
+      addToCartButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const row = this.parentElement.parentElement;
+          const itemName = row.querySelector(".item-name").textContent;
+          const itemPrice = row.querySelector(".item-price").textContent;
+          const itemDescription =
+            row.querySelector(".item-description").textContent;
 
-      <label for="total">Total:</label>
-      <input type="text" id="total" name="total" disabled />
-    </div>
+          console.log("Item Added:", itemName, itemPrice, itemDescription); // Debugging log
 
-    <script src="XXpurchase-order.js"></script>
+          const item = {
+            name: itemName,
+            price: itemPrice,
+            description: itemDescription,
+          };
+
+          let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+          cartItems.push(item);
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+          alert("Item added to cart!");
+        });
+      });
+    </script>
   </body>
 </html>
