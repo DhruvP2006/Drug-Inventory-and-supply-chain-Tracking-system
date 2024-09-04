@@ -190,3 +190,39 @@ body {
 .medicine-row .remove-btn:hover {
   background-color: #a71d2a;
 }
+
+.add-medicine {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.add-btn {
+  font-size: 24px;
+  color: #fff;
+  background-color: #198754;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.add-btn:hover {
+  background-color: #145d3f;
+}
+
+.save-bill {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.save-btn:hover {
+  background-color: #0056b3;
+}

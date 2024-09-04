@@ -51,6 +51,71 @@ addToCartButtons.forEach((button) => {
   });
 });
 
+function addNewMedicine() {
+  const medicineRow = document.createElement("div");
+  medicineRow.classList.add("medicine-row");
+  medicineRow.innerHTML = `
+        <input type="text" class="form-control" placeholder="Medicine Name">
+        <input type="number" class="form-control" placeholder="Quantity" value="1"> <!-- Added -->
+        <input type="number" class="form-control" placeholder="Rate" value="0">
+        <input type="number" class="form-control" placeholder="MRP" value="0">
+        <input type="text" class="form-control" placeholder="HSN Code">
+        <input type="number" class="form-control" placeholder="Discount %" value="0">
+        <input type="number" class="form-control total" placeholder="Total" disabled>
+        <button class="remove-btn" onclick="removeMedicine(this)">-</button>
+    `;
+  document.getElementById("medicine-list").appendChild(medicineRow);
+
+  medicineRow.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("input", () => {
+      calculateTotal(medicineRow);
+      calculateGrandTotal();
+    });
+  });
+}
+
+function removeMedicine(button) {
+  const row = button.closest(".medicine-row");
+  row.remove();
+  calculateGrandTotal();
+}
+
+function saveBill() {
+  const billContainer = document.getElementById("bill-container");
+  const billItems = document.getElementById("bill-items");
+  billItems.innerHTML = "";
+
+  const rows = document.querySelectorAll(".medicine-row");
+  rows.forEach((row) => {
+    const medicineName = row.querySelector(
+      'input[placeholder="Medicine Name"]'
+    ).value;
+    const quantity = row.querySelector('input[placeholder="Quantity"]').value;
+    const rate = row.querySelector('input[placeholder="Rate"]').value;
+    const mrp = row.querySelector('input[placeholder="MRP"]').value;
+    const hsnCode = row.querySelector('input[placeholder="HSN Code"]').value;
+    const discount = row.querySelector('input[placeholder="Discount %"]').value;
+    const total = row.querySelector(".total").value;
+
+    const billRow = document.createElement("tr");
+    billRow.innerHTML = `
+            <td>${medicineName}</td>
+            <td>${quantity}</td>
+            <td>${rate}</td>
+            <td>${mrp}</td>
+            <td>${hsnCode}</td>
+            <td>${discount}</td>
+            <td>${total}</td>
+        `;
+    billItems.appendChild(billRow);
+  });
+
+  const grandTotal = document.getElementById("grand-total").innerText;
+  document.getElementById("bill-grand-total").innerText = grandTotal;
+
+  billContainer.style.display = "block";
+}
+
 // sending to flask the button data-----------------------------------------------------------------------------
 document.querySelectorAll(".add-to-cart").forEach((button) => {
   button.addEventListener("click", function () {
