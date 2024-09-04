@@ -32,7 +32,7 @@ def add_item():
 def home():
     return render_template('index.html')
 
-@app.route('/inven')
+@app.route('/inventory')
 def about():
     return render_template('inventory.html')
 
