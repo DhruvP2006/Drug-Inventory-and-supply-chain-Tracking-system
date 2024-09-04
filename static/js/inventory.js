@@ -50,3 +50,33 @@ addToCartButtons.forEach((button) => {
     // alert("Item added to cart!");
   });
 });
+
+// sending to flask the button data
+document.querySelectorAll(".add-to-cart").forEach((button) => {
+  button.addEventListener("click", function () {
+    const row = this.closest("tr");
+    const data = {
+      itemCode: row.cells[1].innerText,
+      itemName: row.cells[0].innerText,
+      hsnSacCode: row.cells[2].innerText,
+      purchasePrice: row.cells[3].innerText,
+      MRP: row.cells[4].innerText,
+      stock: row.cells[5].innerText,
+    };
+
+    fetch("/add-item", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  });
+});
