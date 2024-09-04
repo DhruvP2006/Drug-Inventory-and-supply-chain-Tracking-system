@@ -173,3 +173,45 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
   });
 });
 //---------------------------------------------------------------------------------------------------------------
+function addItem() {
+  const medicineRows = document.querySelectorAll('.medicine-row');
+  const medicineData = [];
+  console.log(medicineRows);
+
+  medicineRows.forEach(row => {
+      console.log("row lol " + row.querySelector('input[placeholder="Name"]').value);
+      const itemName = row.querySelector('input[placeholder="Name"]').value;
+      const quantity = row.querySelector('input[placeholder="Quantity"]').value;
+      const rate = row.querySelector('input[placeholder="Purchase Price"]').value;
+      const mrp = row.querySelector('input[placeholder="MRP"]').value;
+      const hsnCode = row.querySelector('input[placeholder="HSN/SAC Code"]').value;
+      const itemCode = row.querySelector('input[placeholder="Item Code"]').value;
+
+      // Create an object for each row
+      medicineData.push({
+          itemCode: parseInt(itemCode),
+          itemName: itemName,
+          hsnSacCode: parseInt(hsnCode),
+          purchasePrice: parseInt(rate),
+          MRP: parseInt(mrp),
+          stock: parseInt(quantity),
+      });
+  });
+  console.log("lol" + medicineData);
+
+  // Send data to backend
+  fetch('/add-item', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(medicineData)
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Success:', data);
+  })
+  .catch((error) => {
+      console.error('Error:', error);
+  });
+}
