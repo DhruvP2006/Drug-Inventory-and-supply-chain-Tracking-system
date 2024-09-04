@@ -1,126 +1,127 @@
 .billing-container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .medicine-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .medicine-row input {
-    width: 130px;
-    text-align: center;
+  width: 130px;
+  text-align: center;
 }
 
 .medicine-row .total {
-    font-weight: bold;
-    color: #198754;
+  font-weight: bold;
+  color: #198754;
 }
 
 .medicine-row .remove-btn {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .medicine-row .remove-btn:hover {
-    background-color: #a71d2a;
+  background-color: #a71d2a;
 }
 
 .add-medicine {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .add-btn {
-    font-size: 24px;
-    color: #fff;
-    background-color: #198754;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #198754;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
 .add-btn:hover {
-    background-color: #145d3f;
+  background-color: #145d3f;
 }
 
 .save-bill {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .save-btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
 
 .save-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .bill-container {
-    display: none;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .bill-table {
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.bill-table th, .bill-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
+.bill-table th,
+.bill-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
 .bill-total {
-    font-weight: bold;
-    color: #198754;
-    text-align: right;
+  font-weight: bold;
+  color: #198754;
+  text-align: right;
 }
 
 .to-section {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    color: #007bff;
-    font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
 }
 
 .modal-header {
-    background-color: #007bff;
-    color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .modal-body input {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

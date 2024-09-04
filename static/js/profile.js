@@ -68,3 +68,13 @@ document.querySelectorAll(".add-note-button").forEach((button) => {
 document.getElementById("save-notes").addEventListener("click", function () {
   alert("Notes saved successfully!");
 });
+
+/* Open the side panel */
+function openPanel() {
+  document.getElementById("mySidePanel").style.width = "250px";
+}
+
+/* Close the side panel */
+function closePanel() {
+  document.getElementById("mySidePanel").style.width = "0";
+}

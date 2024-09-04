@@ -21,52 +21,6 @@ body {
   row-gap: 60px;
 }
 
-/* .sidepanel {
-  background-color: #f5f3f4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.inst-name {
-  padding-top: 20px;
-}
-
-.pfp {
-  height: 100px;
-  width: auto;
-  padding: 20px;
-}
-
-.sidepanel-list {
-  width: 200pxpx;
-  height: 300px;
-  background-color: #f5f3f4;
-  border: #f5f3f4 5px solid;
-  border-radius: 10px;
-  font-size: 24px;
-  list-style: none;
-  grid-row: 2/3;
-  grid-column: 1/-1;
-  padding: 10px;
-}
-
-.sp {
-  padding: 10px;
-}
-
-.sp:link,
-.sp:visited {
-  text-decoration: none;
-  color: #000;
-}
-
-.sp:hover,
-.sp:active {
-  background-color: #fff;
-  border-radius: 10px;
-} */
-
 .inventory-dashboard {
   font-size: 14px;
   background-color: #f5f3f4;
@@ -177,4 +131,62 @@ body {
   top: -20px;
   left: -1px;
   padding-right: 1448px;
+}
+
+.add-to-cart {
+  border: 2px solid #198754;
+  background-color: #fff;
+  color: #198754;
+  border-radius: 500px;
+  padding: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+.billing-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.medicine-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.medicine-row input {
+  width: 130px;
+  text-align: center;
+}
+
+.medicine-row .total {
+  font-weight: bold;
+  color: #198754;
+}
+
+.medicine-row .remove-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.medicine-row .remove-btn:hover {
+  background-color: #a71d2a;
 }

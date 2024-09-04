@@ -51,7 +51,7 @@ addToCartButtons.forEach((button) => {
   });
 });
 
-// sending to flask the button data
+// sending to flask the button data-----------------------------------------------------------------------------
 document.querySelectorAll(".add-to-cart").forEach((button) => {
   button.addEventListener("click", function () {
     const row = this.closest("tr");
@@ -80,3 +80,4 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
       });
   });
 });
+//---------------------------------------------------------------------------------------------------------------
