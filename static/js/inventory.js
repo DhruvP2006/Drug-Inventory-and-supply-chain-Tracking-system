@@ -1,3 +1,30 @@
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the link that opens the modal
+var link = document.getElementById("openModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the link, open the modal
+link.onclick = function (event) {
+  event.preventDefault();
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
 /* Open the side panel */
 function openPanel() {
   document.getElementById("mySidePanel").style.width = "250px";
@@ -55,13 +82,12 @@ function addNewMedicine() {
   const medicineRow = document.createElement("div");
   medicineRow.classList.add("medicine-row");
   medicineRow.innerHTML = `
-        <input type="text" class="form-control" placeholder="Medicine Name">
-        <input type="number" class="form-control" placeholder="Quantity" value="1"> <!-- Added -->
-        <input type="number" class="form-control" placeholder="Rate" value="0">
-        <input type="number" class="form-control" placeholder="MRP" value="0">
-        <input type="text" class="form-control" placeholder="HSN Code">
-        <input type="number" class="form-control" placeholder="Discount %" value="0">
-        <input type="number" class="form-control total" placeholder="Total" disabled>
+        <input type="text" class="form-control" placeholder="Name">
+        <input type="number" class="form-control" placeholder="Item Code" value=""> <!-- Added -->
+        <input type="number" class="form-control" placeholder="HSN/SAC Code" value="">
+        <input type="number" class="form-control" placeholder="Purchase Price" value="">
+        <input type="number" class="form-control" placeholder="MRP" value="">
+        <input type="text" class="form-control" placeholder="Quantity">
         <button class="remove-btn" onclick="removeMedicine(this)">-</button>
     `;
   document.getElementById("medicine-list").appendChild(medicineRow);
@@ -90,22 +116,23 @@ function saveBill() {
     const medicineName = row.querySelector(
       'input[placeholder="Medicine Name"]'
     ).value;
-    const quantity = row.querySelector('input[placeholder="Quantity"]').value;
-    const rate = row.querySelector('input[placeholder="Rate"]').value;
+    const medName = row.querySelector('input[placeholder="Name"]').value;
+    const code = row.querySelector('input[placeholder="Item Code"]').value;
+    const hsncode = row.querySelector(
+      'input[placeholder="HSN/SAC Code"]'
+    ).value;
+    const rate = row.querySelector('input[placeholder="Purchase Price"]').value;
     const mrp = row.querySelector('input[placeholder="MRP"]').value;
-    const hsnCode = row.querySelector('input[placeholder="HSN Code"]').value;
-    const discount = row.querySelector('input[placeholder="Discount %"]').value;
-    const total = row.querySelector(".total").value;
+    const quantity = row.querySelector('input[placeholder="Quantity"]').value;
 
     const billRow = document.createElement("tr");
     billRow.innerHTML = `
-            <td>${medicineName}</td>
-            <td>${quantity}</td>
+            <td>${medName}</td>
+            <td>${code}</td>
+            <td>${hsnCode}</td>
             <td>${rate}</td>
             <td>${mrp}</td>
-            <td>${hsnCode}</td>
-            <td>${discount}</td>
-            <td>${total}</td>
+            <td>${quantity}</td>
         `;
     billItems.appendChild(billRow);
   });

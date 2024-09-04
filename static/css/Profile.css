@@ -1,4 +1,11 @@
 body {
+  border-top: 51px solid #1f3b4d;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   font-family: Arial, sans-serif;
   margin: 20px;
   padding: 0;
@@ -21,45 +28,56 @@ section {
   margin-bottom: 10px;
 }
 
-.sidepanel {
-  background-color: #f5f3f4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.side-panel {
+  height: 100%; /* Full height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  left: 0;
+  background-color: #1f3b4d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
+  padding-top: 60px; /* Place content 60px from the top */
 }
 
-.pfp {
-  height: 100px;
-  width: auto;
-  padding: 20px;
-}
-
-.sidepanel-list {
-  width: 300px;
-  height: 300px;
-  background-color: #f5f3f4;
-  border: #f5f3f4 5px solid;
-  border-radius: 10px;
-  font-size: 24px;
-  list-style: none;
-  grid-row: 2/3;
-  grid-column: 1/-1;
-}
-
-.sp {
-  padding: 10px;
-}
-
-.sp:link,
-.sp:visited {
+/* Side Panel Links */
+.side-panel a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  color: #000;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
 }
 
-.sp:hover,
-.sp:active {
-  background-color: #fff;
-  border-radius: 10px;
+/* Side Panel Links on Hover */
+.side-panel a:hover {
+  color: #f1f1f1;
+}
+
+/* Close Button */
+.side-panel .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Button to Open the Side Panel */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1f3b4d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 20px;
+  position: absolute;
+  top: -20px;
+  left: -1px;
+  /* padding-right: 1448px; */
 }
 
 input[type="text"],
@@ -108,7 +126,6 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  margin: 20px;
   padding: 0;
 }
 

@@ -117,20 +117,14 @@
           <!-- <button class="sort-btn">
             <img height="30px" width="30px" src="apps-sort.png" />
           </button> -->
+
           <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="true"
-            >
-              Sort By
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Item Name</a></li>
-              <li><a class="dropdown-item" href="#">Item Code</a></li>
-              <li><a class="dropdown-item" href="#">Current Stock</a></li>
-            </ul>
+            <button class="dropbtn">Sort By</button>
+            <div class="dropdown-content">
+              <a href="#">Order Number</a>
+              <a href="#">Supplier</a>
+              <a href="#">Order Amount</a>
+            </div>
           </div>
         </nav>
         <div class="header">
@@ -233,6 +227,7 @@
               class="form-control"
               placeholder="Quantity"
               value=""
+              disabled
             />
 
             <button class="remove-btn" onclick="removeMedicine(this)">-</button>
