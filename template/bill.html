@@ -14,6 +14,56 @@
     <link rel="stylesheet" href="..\static\css\bill.css" />
   </head>
   <body>
+    <!-- The Side Panel -->
+    <div id="mysidePanel" class="side-panel">
+      <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+        >&times;</a
+      >
+      <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
+      <a href="Profile.html"
+        ><img src="..\static\images\pfp.png" height="25px" width="25px" />
+        Profile</a
+      >
+      <a href="inventory.html"
+        ><img
+          height="20px"
+          width="20px"
+          src="..\static\images\inventory-alt.png"
+        />
+        Inventory</a
+      >
+      <a href="sales-report.html"
+        ><img height="20px" width="20px" src="..\static\images\sales.png" />
+        Sales Report</a
+      >
+      <a href="purchase-order.html"
+        ><img height="20px" width="20px" src="..\static\images\PO.png" />
+        Purchase Order</a
+      >
+
+      <a href="distributor.html"
+        ><img height="20px" width="20px" src="..\static\images\PO.png" /> My
+        Distributors</a
+      >
+
+      <a href="bill.html"
+        ><img height="25px" width="25px" src="..\static\images\truck.png" />
+        Supply Requests</a
+      >
+
+      <a href="checkout.html"
+        ><img
+          height="20px"
+          width="20px"
+          src="../static/images/shopping-cart.png"
+        />
+        Checkout</a
+      >
+      <a href="Landing page.html"
+        ><img height="20px" width="20px" src="..\static\images\logout.png" />
+        Logout</a
+      >
+    </div>
     <div class="billing-container">
       <h3 class="text-center">Billing Platform</h3>
 
@@ -70,7 +120,7 @@
             placeholder="Total"
             disabled
           />
-          <button class="remove-btn" onclick="removeMedicine(this)">x</button>
+          <button class="remove-btn" onclick="removeMedicine(this)">-</button>
         </div>
       </div>
 
@@ -174,7 +224,7 @@
         </div>
       </div>
     </div>
-
+    <button class="open-btn" onclick="openPanel()">☰ Menu</button>
     <script src="..\static\js\bill.js"></script>
   </body>
 </html>
