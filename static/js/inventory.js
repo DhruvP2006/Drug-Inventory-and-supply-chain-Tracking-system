@@ -1,29 +1,9 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+const dropdownMenu = document.querySelector(".dropdown-menu");
 
-// Get the link that opens the modal
-var link = document.getElementById("openModal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the link, open the modal
-link.onclick = function (event) {
-  event.preventDefault();
-  modal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+dropdownToggle.addEventListener("click", function () {
+  dropdownMenu.classList.toggle("show");
+});
 
 /* Open the side panel */
 function openPanel() {
@@ -87,7 +67,7 @@ function addNewMedicine() {
         <input type="number" class="form-control" placeholder="HSN/SAC Code" value="">
         <input type="number" class="form-control" placeholder="Purchase Price" value="">
         <input type="number" class="form-control" placeholder="MRP" value="">
-        <input type="text" class="form-control" placeholder="Quantity">
+        <input type="text" class="form-control" placeholder="Quantity" disabled>
         <button class="remove-btn" onclick="removeMedicine(this)">-</button>
     `;
   document.getElementById("medicine-list").appendChild(medicineRow);
@@ -174,44 +154,48 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
 });
 //---------------------------------------------------------------------------------------------------------------
 function addItem() {
-  const medicineRows = document.querySelectorAll('.medicine-row');
+  const medicineRows = document.querySelectorAll(".medicine-row");
   const medicineData = [];
   console.log(medicineRows);
 
-  medicineRows.forEach(row => {
-      console.log("row lol " + row.querySelector('input[placeholder="Name"]').value);
-      const itemName = row.querySelector('input[placeholder="Name"]').value;
-      const quantity = row.querySelector('input[placeholder="Quantity"]').value;
-      const rate = row.querySelector('input[placeholder="Purchase Price"]').value;
-      const mrp = row.querySelector('input[placeholder="MRP"]').value;
-      const hsnCode = row.querySelector('input[placeholder="HSN/SAC Code"]').value;
-      const itemCode = row.querySelector('input[placeholder="Item Code"]').value;
+  medicineRows.forEach((row) => {
+    console.log(
+      "row lol " + row.querySelector('input[placeholder="Name"]').value
+    );
+    const itemName = row.querySelector('input[placeholder="Name"]').value;
+    const quantity = row.querySelector('input[placeholder="Quantity"]').value;
+    const rate = row.querySelector('input[placeholder="Purchase Price"]').value;
+    const mrp = row.querySelector('input[placeholder="MRP"]').value;
+    const hsnCode = row.querySelector(
+      'input[placeholder="HSN/SAC Code"]'
+    ).value;
+    const itemCode = row.querySelector('input[placeholder="Item Code"]').value;
 
-      // Create an object for each row
-      medicineData.push({
-          itemCode: parseInt(itemCode),
-          itemName: itemName,
-          hsnSacCode: parseInt(hsnCode),
-          purchasePrice: parseInt(rate),
-          MRP: parseInt(mrp),
-          stock: parseInt(quantity),
-      });
+    // Create an object for each row
+    medicineData.push({
+      itemCode: parseInt(itemCode),
+      itemName: itemName,
+      hsnSacCode: parseInt(hsnCode),
+      purchasePrice: parseInt(rate),
+      MRP: parseInt(mrp),
+      stock: parseInt(quantity),
+    });
   });
   console.log("lol" + medicineData);
 
   // Send data to backend
-  fetch('/add-item', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(medicineData)
+  fetch("/add-item", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(medicineData),
   })
-  .then(response => response.json())
-  .then(data => {
-      console.log('Success:', data);
-  })
-  .catch((error) => {
-      console.error('Error:', error);
-  });
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }

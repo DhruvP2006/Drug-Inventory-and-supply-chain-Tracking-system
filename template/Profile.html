@@ -69,12 +69,21 @@
         </div>
         <div class="profile-item">
           <label for="profile-designation">Designation:</label>
-          <input
+          <!-- <input
             type="text"
             id="profile-designation"
             placeholder="Enter your designation(Wholesaler/Retailer/Distributor/Manufacturer)"
           />
-        </div>
+        </div> -->
+        <div class="dropdown">
+            <input class="dropdown-toggle" placeholder="Select Role" />
+            <div class="dropdown-menu">
+              <a href="#">Wholesaler</a>
+              <a href="#">Retailer</a>
+              <a href="#">Distributor</a>
+              <a href="#">Manufacturer</a>
+            </div>
+          </div>
         <div class="profile-item">
           <label for="profile-address">Address:</label>
           <input
@@ -170,7 +179,7 @@
             ></textarea>
           </div>
         </div>
-        <button id="add-employee-card">+</button>
+        <button id="add-employee-card" class="plus">+</button>
       </section>
 
       <!-- Icons for other pages(Invenory/Billing/Checkout/Tracking(inc)) -->
