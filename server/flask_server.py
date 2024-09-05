@@ -4,6 +4,12 @@ from dotenv import load_dotenv
 from supabase import create_client, Client
 from supabase.client import ClientOptions
 
+# Get the absolute path of the current Python file
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Change the working directory to the current file's directory
+os.chdir(current_dir)
+
 # Load environment variables from .env file
 load_dotenv()
 
