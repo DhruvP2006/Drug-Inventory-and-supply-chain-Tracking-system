@@ -11,7 +11,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(current_dir)
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(dotenv_path='supabase.env')
 
 url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
@@ -34,13 +34,37 @@ def add_item():
         return jsonify({"error": response.error.message}), 400
     return jsonify({"message": "Item added successfully!"}), 200
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+@app.route('/bill')
+def bill():
+    return render_template('bill.html')
+
+@app.route('/checkout')
+def checkout():
+    return render_template('checkout.html')
 
 @app.route('/inventory')
-def about():
+def inventory():
     return render_template('inventory.html')
 
+@app.route('/')
+def profilee():
+    return render_template('profile.html')
+
+@app.route('/landing')
+def landing():
+    return render_template('landing_page.html')
+
+@app.route('/purchase-order')
+def purchase():
+    return render_template('purchase-order.html')
+
+@app.route('/sales-report')
+def sales():
+    return render_template('sales-report.html')
+
+@app.route('/distributor')
+def distributor():
+    return render_template('distributor.html')
+
 if __name__ == '__main__':
-    app.run(debug=True, port=3000)
+    app.run(debug=True, port=8000)
