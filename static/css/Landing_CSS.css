@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* position: absolute; */
 }
 
 body {
+  position: absolute;
   background-color: #f1f1f1;
   font-family: "Inter" sans-serif;
   color: #343a40;
@@ -27,6 +29,7 @@ h1 {
   text-decoration: aqua;
   font-size: 60px;
 }
+
 a {
   padding-right: 10px;
   margin-top: 5px;
@@ -59,6 +62,22 @@ body {
   scrollbar-color: red transparent;
   scroll-behavior: inherit;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6 1fr);
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   border-radius: 900px;
   width: 275px;
