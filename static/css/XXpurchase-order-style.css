@@ -1,0 +1,52 @@
+.calc {
+  display: grid;
+  grid-template-columns: 70px 130px;
+  background-color: #f1f1f1;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 300px;
+  background-color: #f5f3f4;
+  border: #fff 5px solid;
+  border-radius: 10px;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.disc-calc {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-columns: 45px 40px 45px;
+  justify-content: center;
+  align-content: center;
+}
+
+.lb2 {
+  justify-self: center;
+}
+
+.calculate {
+  margin: 10px;
+  padding: 5px;
+  display: block;
+  border-radius: 100px;
+  background-color: #fff;
+  border: 2px solid #198754;
+  color: #198754;
+  grid-column: 1/-1;
+}
+
+.calculate:hover {
+  color: #fff;
+  background-color: #198754;
+}
+
+#quantity,
+#price,
+#discount,
+#total,
+#discountedAmount {
+  border-radius: 5px;
+}

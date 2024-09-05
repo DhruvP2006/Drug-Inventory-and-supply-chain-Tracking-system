@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inert" sans-serif;
+  align-items: center;
+  justify-items: center;
+  border-top: 51px #1f3b4d solid;
+}
+
+.row {
+  display: grid;
+  width: 1400px;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 100px;
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  gap: 30px;
+  margin-left: 60px;
+}
+
+.inst-name {
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  align-self: center;
+}
+
+/* The Side Panel (hidden by default) */
+.side-panel {
+  height: 100%; /* Full height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  left: 0;
+  background-color: #1f3b4d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* Side Panel Links */
+.side-panel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
+}
+
+/* Side Panel Links on Hover */
+.side-panel a:hover {
+  color: #f1f1f1;
+}
+
+/* Close Button */
+.side-panel .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Button to Open the Side Panel */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1f3b4d;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  margin-top: 20px;
+  position: absolute;
+  top: -20px;
+  left: -1px;
+}
+
+canvas {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box {
+  align-self: center;
+  justify-self: center;
+}
+.card-body {
+  width: 368px;
+}
+
+.chart1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 400px;
+}
+
+.chart2 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: 400px;
+}
+
+.chart3 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 400px;
+}
