@@ -46,11 +46,11 @@ def checkout():
 def inventory():
     return render_template('inventory.html')
 
-@app.route('/')
+@app.route('/Profile')
 def profilee():
-    return render_template('profile.html')
+    return render_template('Profile.html')
 
-@app.route('/landing')
+@app.route('/')
 def landing():
     return render_template('landing_page.html')
 
@@ -66,5 +66,7 @@ def sales():
 def distributor():
     return render_template('distributor.html')
 
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=3000)
