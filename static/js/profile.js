@@ -25,8 +25,7 @@ document.getElementById("save-profile").addEventListener("click", function () {
   let designation = document.getElementById("profile-designation").value;
   let address = document.getElementById("profile-address").value;
   let phone = document.getElementById("profile-phone").value;
-  let gstin = document.getElementById("profile-GSTIN").value;
-
+  
   document.getElementById("id-card-name").textContent = name;
   document.getElementById("id-card-designation").textContent = designation;
   document.getElementById("id-card-address").textContent = address;
