@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distributor Management</title>
+    <link rel="stylesheet" href="..\static\css\distributor.css" />
+    <!-- Bootstrap CSS (Optional for styling) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="mySidePanel" class="side-panel">
+      <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+        >&times;</a
+      >
+      <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
+      <a href="Profile.html"
+        ><img src="..\static\images\pfp.png" height="25px" width="25px" />
+        Profile</a
+      >
+      <a href="inventory.html"
+        ><img
+          height="20px"
+          width="20px"
+          src="..\static\images\inventory-alt.png"
+        />
+        Inventory</a
+      >
+      <a href="sales-report.html"
+        ><img height="20px" width="20px" src="..\static\images\sales.png" />
+        Sales Report</a
+      >
+      <a href="purchase-order.html"
+        ><img height="20px" width="20px" src="..\static\images\PO.png" />
+        Purchase Order</a
+      >
+      <a href="distributor.html"
+        ><img height="20px" width="20px" src="..\static\images\PO.png" /> My
+        Distributors</a
+      >
+      <a href="bill.html"
+        ><img height="25px" width="25px" src="..\static\images\truck.png" />
+        Supply Requests</a
+      >
+
+      <a href="checkout.html"
+        ><img
+          height="20px"
+          width="20px"
+          src="../static/images/shopping-cart.png"
+        />
+        Checkout</a
+      >
+      <a href="Landing page.html"
+        ><img height="20px" width="20px" src="..\static\images\logout.png" />
+        Logout</a
+      >
+    </div>
+    <div class="container mt-5">
+      <h1 class="text-center">Distributor Management</h1>
+      <button id="addDistributorBtn" class="btn btn-primary">
+        Add Distributor
+      </button>
+
+      <!-- Distributor Cards Container -->
+      <div id="distributorCardsContainer" class="mt-4 row">
+        <!-- Distributor Cards will be appended here -->
+      </div>
+    </div>
+
+    <!-- Distributor Modal -->
+    <div
+      class="modal fade"
+      id="distributorModal"
+      tabindex="-1"
+      aria-labelledby="distributorModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="distributorModalLabel">
+              Add Distributor
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="distributorForm">
+              <div class="mb-3">
+                <label for="distributorName" class="form-label"
+                  >Distributor Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="distributorName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="distributorEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="distributorEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="distributorPhone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="distributorPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="distributorAddress" class="form-label"
+                  >Address</label
+                >
+                <textarea
+                  class="form-control"
+                  id="distributorAddress"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Add Distributor
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="static\js\distributor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
