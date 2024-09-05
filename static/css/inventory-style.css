@@ -147,7 +147,7 @@ body {
 }
 
 .billing-container {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -165,7 +165,7 @@ body {
 }
 
 .medicine-row input {
-  width: 130px;
+  width: 150px;
   text-align: center;
 }
 

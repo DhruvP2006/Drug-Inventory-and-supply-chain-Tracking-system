@@ -1,0 +1,64 @@
+.card {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-body p {
+  margin-bottom: 5px;
+}
+
+/* The Side Panel (hidden by default) */
+.side-panel {
+  height: 100%; /* Full height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  left: 0;
+  background-color: #1f3b4d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* Side Panel Links */
+.side-panel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
+}
+
+/* Side Panel Links on Hover */
+.side-panel a:hover {
+  color: #f1f1f1;
+}
+
+/* Close Button */
+.side-panel .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Button to Open the Side Panel */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1f3b4d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 20px;
+  position: absolute;
+  top: -20px;
+  left: -1px;
+  padding-right: 1448px;
+}

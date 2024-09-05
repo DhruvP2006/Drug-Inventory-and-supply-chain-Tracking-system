@@ -19,41 +19,6 @@
   </head>
   <body>
     <div class="container">
-      <!-- <div class="sidepanel">
-
-        <img class="pfp" src="pfp.png" />
-        <p class="inst-name">M/s. Apollo Pharmacy</p>
-        <ul class="sidepanel-list">
-          <li>
-            <a href="#" class="sp profile"
-              ><img height="20px" width="20px" src="pfp.png" /> Profile</a
-            >
-          </li>
-          <li>
-            <a href="inventory.html" class="sp invertory"
-              ><img height="20px" width="20px" src="inventory-alt.png" />
-              Inventory</a
-            >
-          </li>
-          <li>
-            <a href="purchase-order.html" class="sp po">
-              <img height="20px" width="20px" src="PO.png" /> Purchase Order</a
-            >
-          </li>
-          <li>
-            <a href="order-stat.html" class="sp deliveryStat"
-              ><img height="20px" width="20px" src="inventory-alt.png" /> Order
-              Status</a
-            >
-          </li>
-          <li>
-            <a href="checkout.html" class="sp checkout">
-              <img height="20px" width="20px" src="shopping-cart.png" />
-              Checkout</a
-            >
-          </li>
-        </ul>
-      </div> -->
       <!-- The Side Panel -->
       <div id="mySidePanel" class="side-panel">
         <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
@@ -79,6 +44,11 @@
         <a href="purchase-order.html"
           ><img height="20px" width="20px" src="..\static\images\PO.png" />
           Purchase Order</a
+        >
+
+        <a href="distributor.html"
+          ><img height="20px" width="20px" src="..\static\images\PO.png" /> My
+          Distributors</a
         >
 
         <a href="bill.html"
@@ -117,20 +87,14 @@
           <!-- <button class="sort-btn">
             <img height="30px" width="30px" src="apps-sort.png" />
           </button> -->
+
           <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="true"
-            >
-              Sort By
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Item Name</a></li>
-              <li><a class="dropdown-item" href="#">Item Code</a></li>
-              <li><a class="dropdown-item" href="#">Current Stock</a></li>
-            </ul>
+            <button class="dropbtn">Sort By</button>
+            <div class="dropdown-content">
+              <a href="#">Order Number</a>
+              <a href="#">Supplier</a>
+              <a href="#">Order Amount</a>
+            </div>
           </div>
         </nav>
         <div class="header">
@@ -233,6 +197,7 @@
               class="form-control"
               placeholder="Quantity"
               value=""
+              disabled
             />
 
             <button class="remove-btn" onclick="removeMedicine(this)">-</button>

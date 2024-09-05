@@ -7,207 +7,226 @@
     <link rel="stylesheet" href="..\static\css\Profile.css" />
   </head>
   <body>
-    <!-- Profile(Change into id card thing) -->
-    <div id="mySidePanel" class="side-panel">
-      <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
-        >&times;</a
-      >
-      <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
-      <a href="Profile.html"
-        ><img src="..\static\images\pfp.png" height="25px" width="25px" />
-        Profile</a
-      >
-      <a href="inventory.html"
-        ><img
-          height="20px"
-          width="20px"
-          src="..\static\images\inventory-alt.png"
-        />
-        Inventory</a
-      >
-      <a href="sales-report.html"
-        ><img height="20px" width="20px" src="..\static\images\sales.png" />
-        Sales Report</a
-      >
-      <a href="purchase-order.html"
-        ><img height="20px" width="20px" src="..\static\images\PO.png" />
-        Purchase Order</a
-      >
+    <div class="container">
+      <!-- Profile(Change into id card thing) -->
+      <div id="mySidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="closePanel()"
+          >&times;</a
+        >
+        <h4 class="inst-name">M/s. Apollo Pharmacy</h4>
+        <a href="Profile.html"
+          ><img src="..\static\images\pfp.png" height="25px" width="25px" />
+          Profile</a
+        >
+        <a href="inventory.html"
+          ><img
+            height="20px"
+            width="20px"
+            src="..\static\images\inventory-alt.png"
+          />
+          Inventory</a
+        >
+        <a href="sales-report.html"
+          ><img height="20px" width="20px" src="..\static\images\sales.png" />
+          Sales Report</a
+        >
+        <a href="purchase-order.html"
+          ><img height="20px" width="20px" src="..\static\images\PO.png" />
+          Purchase Order</a
+        >
 
-      <a href="bill.html"
-        ><img height="25px" width="25px" src="..\static\images\truck.png" />
-        Supply Requests</a
-      >
+        <a href="bill.html"
+          ><img height="25px" width="25px" src="..\static\images\truck.png" />
+          Supply Requests</a
+        >
 
-      <a href="checkout.html"
-        ><img
-          height="20px"
-          width="20px"
-          src="../static/images/shopping-cart.png"
-        />
-        Checkout</a
-      >
-      <a href="Landing page.html"
-        ><img height="20px" width="20px" src="..\static\images\logout.png" />
-        Logout</a
-      >
+        <a href="checkout.html"
+          ><img
+            height="20px"
+            width="20px"
+            src="../static/images/shopping-cart.png"
+          />
+          Checkout</a
+        >
+        <a href="Landing page.html"
+          ><img height="20px" width="20px" src="..\static\images\logout.png" />
+          Logout</a
+        >
+      </div>
+      <section id="profile-section">
+        <h1>Profile Information</h1>
+        <div class="profile-item">
+          <label for="profile-name">Name:</label>
+          <input
+            type="text"
+            id="profile-name"
+            placeholder="Enter Company name"
+          />
+        </div>
+        <div class="profile-item">
+          <label for="profile-address">GSTIN:</label>
+          <input type="text" id="profile-GSTIN" placeholder="GSTIN" />
+        </div>
+        <div class="profile-item">
+          <label for="profile-designation">Designation:</label>
+          <input
+            type="text"
+            id="profile-designation"
+            placeholder="Enter your designation(Wholesaler/Retailer/Distributor/Manufacturer)"
+          />
+        </div>
+        <div class="profile-item">
+          <label for="profile-address">Address:</label>
+          <input
+            type="text"
+            id="profile-address"
+            placeholder="Address line 1"
+          />
+        </div>
+        <div class="profile-item">
+          <label for="profile-address">Address:</label>
+          <input
+            type="text"
+            id="profile-address"
+            placeholder="Address line 2"
+          />
+        </div>
+        <div class="profile-item">
+          <label for="profile-code">Area Code:</label>
+          <input type="text" id="profile-code" placeholder="Pin Code" />
+          <label for="states">Select State:</label>
+          <select id="states">
+            <option value="Andhra Pradesh">Select</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+        </div>
+        <div class="profile-item">
+          <label for="profile-phone">Phone Number:</label>
+          <input
+            type="text"
+            id="profile-phone"
+            placeholder="Enter your phone number"
+          />
+        </div>
+        <button id="save-profile">Save Profile</button>
+      </section>
+
+      <!-- Employee carda -->
+      <section id="id-card-section" style="display: none">
+        <div id="id-card">
+          <span id="edit-icon">✏️</span>
+          <h2 id="id-card-name"></h2>
+          <p id="id-card-designation"></p>
+          <p id="id-card-address"></p>
+          <p id="id-card-phone"></p>
+        </div>
+      </section>
+
+      <section id="employee-section">
+        <h1>Employee Details</h1>
+        <div id="employee-cards">
+          <!-- Existing employee card -->
+          <div class="employee-card">
+            <input
+              type="text"
+              class="employee-name"
+              placeholder="Employee Name"
+            />
+            <input
+              type="text"
+              class="employee-number"
+              placeholder="Employee Number"
+            />
+            <textarea
+              class="employee-details"
+              placeholder="Employee Details"
+            ></textarea>
+          </div>
+        </div>
+        <button id="add-employee-card">+</button>
+      </section>
+
+      <!-- Icons for other pages(Invenory/Billing/Checkout/Tracking(inc)) -->
+      <section id="icons-a1b2c">
+        <h1>Navigation Links</h1>
+        <div class="icon-group-x1y2z">
+          <a href="#" class="icon-x1y2z" id="link1-x1y2z">🏠</a>
+          <a href="#" class="icon-x1y2z" id="link2-x1y2z">📋</a>
+          <a href="#" class="icon-x1y2z" id="link3-x1y2z">👤</a>
+          <a href="#" class="icon-x1y2z" id="link4-x1y2z">📞</a>
+        </div>
+      </section>
+
+      <!-- Notes to add-Section(amimations/add/delete/daybook maintaining/employee comments/sales & purchase invoice comments/Cutting & To pay) -->
+      <section id="notes-section">
+        <h1>Notes</h1>
+        <div class="notes-container">
+          <div class="notes-category" id="purchase-invoices">
+            <h2>Purchase Invoices</h2>
+            <div class="notes-content"></div>
+            <button class="add-note-button" data-category="purchase-invoices">
+              Add Note
+            </button>
+          </div>
+          <div class="notes-category" id="sales-invoices">
+            <h2>Sales Invoices</h2>
+            <div class="notes-content"></div>
+            <button class="add-note-button" data-category="sales-invoices">
+              Add Note
+            </button>
+          </div>
+          <div class="notes-category" id="transactions-expenses">
+            <h2>Transactions and Expenses</h2>
+            <div class="notes-content"></div>
+            <button
+              class="add-note-button"
+              data-category="transactions-expenses"
+            >
+              Add Note
+            </button>
+          </div>
+          <div class="notes-category" id="employee-daily-notes">
+            <h2>Employee Daily Notes</h2>
+            <div class="notes-content"></div>
+            <button
+              class="add-note-button"
+              data-category="employee-daily-notes"
+            >
+              Add Note
+            </button>
+          </div>
+        </div>
+        <button id="save-notes">Save Notes</button>
+      </section>
+      <button class="open-btn" onclick="openPanel()">☰ Menu</button>
     </div>
-    <section id="profile-section">
-      <h1>Profile Information</h1>
-      <div class="profile-item">
-        <label for="profile-name">Name:</label>
-        <input type="text" id="profile-name" placeholder="Enter Company name" />
-      </div>
-      <div class="profile-item">
-        <label for="profile-address">GSTIN:</label>
-        <input type="text" id="profile-GSTIN" placeholder="GSTIN" />
-      </div>
-      <div class="profile-item">
-        <label for="profile-designation">Designation:</label>
-        <input
-          type="text"
-          id="profile-designation"
-          placeholder="Enter your designation(Wholesaler/Retailer/Distributor/Manufacturer)"
-        />
-      </div>
-      <div class="profile-item">
-        <label for="profile-address">Address:</label>
-        <input type="text" id="profile-address" placeholder="Address line 1" />
-      </div>
-      <div class="profile-item">
-        <label for="profile-address">Address:</label>
-        <input type="text" id="profile-address" placeholder="Address line 2" />
-      </div>
-      <div class="profile-item">
-        <label for="profile-code">Area Code:</label>
-        <input type="text" id="profile-code" placeholder="Pin Code" />
-        <label for="states">Select State:</label>
-        <select id="states">
-          <option value="Andhra Pradesh">Select</option>
-          <option value="Andhra Pradesh">Andhra Pradesh</option>
-          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-          <option value="Assam">Assam</option>
-          <option value="Bihar">Bihar</option>
-          <option value="Chhattisgarh">Chhattisgarh</option>
-          <option value="Goa">Goa</option>
-          <option value="Gujarat">Gujarat</option>
-          <option value="Haryana">Haryana</option>
-          <option value="Himachal Pradesh">Himachal Pradesh</option>
-          <option value="Jharkhand">Jharkhand</option>
-          <option value="Karnataka">Karnataka</option>
-          <option value="Kerala">Kerala</option>
-          <option value="Madhya Pradesh">Madhya Pradesh</option>
-          <option value="Maharashtra">Maharashtra</option>
-          <option value="Manipur">Manipur</option>
-          <option value="Meghalaya">Meghalaya</option>
-          <option value="Mizoram">Mizoram</option>
-          <option value="Nagaland">Nagaland</option>
-          <option value="Odisha">Odisha</option>
-          <option value="Punjab">Punjab</option>
-          <option value="Rajasthan">Rajasthan</option>
-          <option value="Sikkim">Sikkim</option>
-          <option value="Tamil Nadu">Tamil Nadu</option>
-          <option value="Telangana">Telangana</option>
-          <option value="Tripura">Tripura</option>
-          <option value="Uttar Pradesh">Uttar Pradesh</option>
-          <option value="Uttarakhand">Uttarakhand</option>
-          <option value="West Bengal">West Bengal</option>
-        </select>
-      </div>
-      <div class="profile-item">
-        <label for="profile-phone">Phone Number:</label>
-        <input
-          type="text"
-          id="profile-phone"
-          placeholder="Enter your phone number"
-        />
-      </div>
-      <button id="save-profile">Save Profile</button>
-    </section>
-
-    <!-- Employee carda -->
-    <section id="id-card-section" style="display: none">
-      <div id="id-card">
-        <span id="edit-icon">✏️</span>
-        <h2 id="id-card-name"></h2>
-        <p id="id-card-designation"></p>
-        <p id="id-card-address"></p>
-        <p id="id-card-phone"></p>
-      </div>
-    </section>
-
-    <section id="employee-section">
-      <h1>Employee Details</h1>
-      <div id="employee-cards">
-        <!-- Existing employee card -->
-        <div class="employee-card">
-          <input
-            type="text"
-            class="employee-name"
-            placeholder="Employee Name"
-          />
-          <input
-            type="text"
-            class="employee-number"
-            placeholder="Employee Number"
-          />
-          <textarea
-            class="employee-details"
-            placeholder="Employee Details"
-          ></textarea>
-        </div>
-      </div>
-      <button id="add-employee-card">+</button>
-    </section>
-
-    <!-- Icons for other pages(Invenory/Billing/Checkout/Tracking(inc)) -->
-    <section id="icons-a1b2c">
-      <h1>Navigation Links</h1>
-      <div class="icon-group-x1y2z">
-        <a href="#" class="icon-x1y2z" id="link1-x1y2z">🏠</a>
-        <a href="#" class="icon-x1y2z" id="link2-x1y2z">📋</a>
-        <a href="#" class="icon-x1y2z" id="link3-x1y2z">👤</a>
-        <a href="#" class="icon-x1y2z" id="link4-x1y2z">📞</a>
-      </div>
-    </section>
-
-    <!-- Notes to add-Section(amimations/add/delete/daybook maintaining/employee comments/sales & purchase invoice comments/Cutting & To pay) -->
-    <section id="notes-section">
-      <h1>Notes</h1>
-      <div class="notes-container">
-        <div class="notes-category" id="purchase-invoices">
-          <h2>Purchase Invoices</h2>
-          <div class="notes-content"></div>
-          <button class="add-note-button" data-category="purchase-invoices">
-            Add Note
-          </button>
-        </div>
-        <div class="notes-category" id="sales-invoices">
-          <h2>Sales Invoices</h2>
-          <div class="notes-content"></div>
-          <button class="add-note-button" data-category="sales-invoices">
-            Add Note
-          </button>
-        </div>
-        <div class="notes-category" id="transactions-expenses">
-          <h2>Transactions and Expenses</h2>
-          <div class="notes-content"></div>
-          <button class="add-note-button" data-category="transactions-expenses">
-            Add Note
-          </button>
-        </div>
-        <div class="notes-category" id="employee-daily-notes">
-          <h2>Employee Daily Notes</h2>
-          <div class="notes-content"></div>
-          <button class="add-note-button" data-category="employee-daily-notes">
-            Add Note
-          </button>
-        </div>
-      </div>
-      <button id="save-notes">Save Notes</button>
-    </section>
-    <button class="open-btn" onclick="openPanel()">☰ Menu</button>
-
     <script src="..\static\js\profile.js"></script>
   </body>
 </html>
