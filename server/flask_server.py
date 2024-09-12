@@ -67,6 +67,34 @@ def distributor():
     return render_template('distributor.html')
 
 
+@app.route('/bill_m')
+def billl_mm():
+    return render_template('bill_m.html')
+
+
+@app.route('/index_m')
+def index_m():
+    return render_template('index_m.html')
+
+
+@app.route('/inventory_m')
+def inventory_m():
+    return render_template('inventory_m.html')
+
+
+@app.route('/profile_m')
+def profile_m():
+    return render_template('profile_m.html')
+
+
+@app.route('/sales-report_m')
+def sales_report_m():
+    return render_template('sales-report_m.html')
+
+
+@app.route('/purchase-order_m')
+def purchase_m():
+    return render_template('purchase-order_m.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=3000)
